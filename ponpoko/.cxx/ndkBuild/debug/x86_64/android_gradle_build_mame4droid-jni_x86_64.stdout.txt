@@ -1,0 +1,1 @@
+make: Nothing to be done for 'mame4droid-jni'.
