@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "map": [
+                {
+                    "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/values-v21/styles.xml",
+                    "from": {
+                        "startLines": "4,9,15,24",
+                        "startColumns": "1,1,4,4",
+                        "startOffsets": "54,187,329,720",
+                        "endLines": "7,12,22,28",
+                        "endColumns": "9,9,12,12",
+                        "endOffsets": "184,322,710,900"
+                    },
+                    "to": {
+                        "startLines": "2,6,10,18",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,190,330,716",
+                        "endLines": "5,9,17,22",
+                        "endColumns": "9,9,12,12",
+                        "endOffsets": "185,325,711,896"
+                    }
+                }
+            ]
+        }
+    ]
+}
