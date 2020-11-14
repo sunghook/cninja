@@ -1,4 +1,0 @@
-#Sat Nov 14 17:59:34 KST 2020
-base.0=/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
