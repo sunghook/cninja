@@ -5,7 +5,7 @@ android {
     buildToolsVersion "27.0.3"
 
     defaultConfig {
-        applicationId "com.dragofly.ponpoko"
+        applicationId "com.dragofly.cninja"
         minSdkVersion 21
         targetSdkVersion defaultTargetSdkVersion
 
