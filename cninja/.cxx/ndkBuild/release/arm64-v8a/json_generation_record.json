@@ -1,0 +1,80 @@
+[
+  {
+    "level": "INFO",
+    "message": "Start JSON generation. Platform version: 21 min SDK version: arm64-v8a",
+    "file": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "rebuilding JSON /home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/.cxx/ndkBuild/release/arm64-v8a/android_gradle_build.json due to:",
+    "file": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "- command changed from previous, will remove stale json folder",
+    "file": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "removing stale contents from \u0027/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/.cxx/ndkBuild/release/arm64-v8a\u0027",
+    "file": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "created folder \u0027/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/.cxx/ndkBuild/release/arm64-v8a\u0027",
+    "file": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "executing ndkBuild Executable : /home/sunghook/Android/Sdk/ndk/21.1.6352462/ndk-build\narguments : \nNDK_PROJECT_PATH\u003dnull\nAPP_BUILD_SCRIPT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk\nNDK_APPLICATION_MK\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Application.mk\nAPP_ABI\u003darm64-v8a\nNDK_ALL_ABIS\u003darm64-v8a\nNDK_DEBUG\u003d0\nAPP_PLATFORM\u003dandroid-21\nNDK_OUT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/ndkBuild/release/obj\nNDK_LIBS_OUT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/ndkBuild/release/lib\nAPP_SHORT_COMMANDS\u003dfalse\nLOCAL_SHORT_COMMANDS\u003dfalse\n-B\n-n\njvmArgs : \n\n",
+    "file": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Executable : /home/sunghook/Android/Sdk/ndk/21.1.6352462/ndk-build\narguments : \nNDK_PROJECT_PATH\u003dnull\nAPP_BUILD_SCRIPT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk\nNDK_APPLICATION_MK\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Application.mk\nAPP_ABI\u003darm64-v8a\nNDK_ALL_ABIS\u003darm64-v8a\nNDK_DEBUG\u003d0\nAPP_PLATFORM\u003dandroid-21\nNDK_OUT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/ndkBuild/release/obj\nNDK_LIBS_OUT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/ndkBuild/release/lib\nAPP_SHORT_COMMANDS\u003dfalse\nLOCAL_SHORT_COMMANDS\u003dfalse\n-B\n-n\njvmArgs : \n\n",
+    "file": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "done executing ndkBuild",
+    "file": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "write build output /home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/.cxx/ndkBuild/release/arm64-v8a/build_output.txt",
+    "file": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "parse and convert ndk-build output to build configuration JSON",
+    "file": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "found application make file /home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Application.mk",
+    "file": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "write command file /home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/.cxx/ndkBuild/release/arm64-v8a/build_command.txt",
+    "file": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON generation completed without problems",
+    "file": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk",
+    "tag": "release|arm64-v8a"
+  }
+]

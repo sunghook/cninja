@@ -1,0 +1,34 @@
+{
+  "buildFiles": [
+    "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk",
+    "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/home/sunghook/Android/Sdk/ndk/21.1.6352462/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/ndkBuild/release/lib clean"
+  ],
+  "buildTargetsCommand": "/home/sunghook/Android/Sdk/ndk/21.1.6352462/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/ndkBuild/release/lib {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "mame4droid-jni-release-armeabi-v7a": {
+      "buildCommand": "/home/sunghook/Android/Sdk/ndk/21.1.6352462/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/ndkBuild/release/lib /home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/ndkBuild/release/obj/local/armeabi-v7a/libmame4droid-jni.so",
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "mame4droid-jni",
+      "files": [
+        {
+          "src": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni/mame4droid-jni.c",
+          "flags": "-target armv7-none-linux-androideabi21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /home/sunghook/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -I/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/jni -DANDROID -Wformat -Werror\u003dformat-security"
+        }
+      ],
+      "output": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/ndkBuild/release/obj/local/armeabi-v7a/libmame4droid-jni.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi-v7a": {
+      "cCompilerExecutable": "/home/sunghook/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

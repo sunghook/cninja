@@ -1,0 +1,2 @@
+[x86] Compile        : mame4droid-jni <= mame4droid-jni.c
+[x86] SharedLibrary  : libmame4droid-jni.so
