@@ -44,18 +44,27 @@
 
 package com.seleuco.mame4droid.helpers;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.view.Display;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 
 import com.seleuco.mame4droid.Emulator;
 import com.seleuco.mame4droid.MAME4droid;
+import com.seleuco.mame4droid.R;
+import com.seleuco.mame4droid.input.ControlCustomizer;
 import com.seleuco.mame4droid.input.InputHandler;
 import com.seleuco.mame4droid.prefs.GameFilterPrefs;
+import com.seleuco.mame4droid.prefs.UserPreferences;
 
 public class PrefsHelper implements OnSharedPreferenceChangeListener
 {
@@ -222,7 +231,52 @@ public class PrefsHelper implements OnSharedPreferenceChangeListener
 	final public static int PREF_NAVBAR_VISIBLE = 0;
 	final public static int PREF_NAVBAR_DIMM_OR_HIDE = 1;
 	final public static int PREF_NAVBAR_IMMERSIVE = 2;
-	
+
+
+	protected Dialog layoutSettingsDlg = null;
+	private SharedPreferences settings;
+
+	DialogInterface.OnCancelListener dialogCancelListener = new DialogInterface.OnCancelListener() {
+		public void onCancel(DialogInterface dialog) {
+			Emulator.resume();
+		}
+	};
+	Button.OnClickListener showCustomLayoutSettingUI = new Button.OnClickListener() {
+		public void onClick(View v) {
+		    layoutSettingsDlg.hide();
+			ControlCustomizer.setEnabled(true);
+		}
+	};
+
+	Button.OnClickListener showDefaultLayoutSettingUI = new Button.OnClickListener() {
+		public void onClick(View v) {
+
+			AlertDialog.Builder builder = new AlertDialog.Builder(mm);
+			builder.setMessage("Are you sure to restore?")
+					.setCancelable(false)
+					.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int id) {
+							SharedPreferences.Editor editor =  settings.edit();
+							editor.putString(PrefsHelper.PREF_DEFINED_CONTROL_LAYOUT, null);
+							editor.putString(PrefsHelper.PREF_DEFINED_CONTROL_LAYOUT_P, null);
+							editor.commit();
+							mm.getMainHelper().updateMAME4droid();
+	Emulator.resume();
+							layoutSettingsDlg.hide();
+
+						}
+					})
+					.setNegativeButton("No", new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int id) {
+							dialog.cancel();
+						}
+					});
+			Dialog dialog = builder.create();
+			dialog.show();
+		}
+	};
+
+
 	protected GameFilterPrefs gameFilterPrefs = null;
 	
 	public GameFilterPrefs getGameFilterPrefs() {
@@ -699,5 +753,24 @@ public class PrefsHelper implements OnSharedPreferenceChangeListener
 	
 	public String getCustomBIOS(){
 		return getSharedPreferences().getString(PREF_BIOS,"");
-	}	
+	}
+
+	public void createLayoutSettingsDialog() {
+		layoutSettingsDlg = new Dialog(mm);
+
+		settings = PreferenceManager.getDefaultSharedPreferences(mm.getApplicationContext());
+
+		layoutSettingsDlg.setContentView(R.layout.ui_customization);
+		layoutSettingsDlg.setTitle("UI Customization");
+		layoutSettingsDlg.setCancelable(true);
+		layoutSettingsDlg.setOnCancelListener(dialogCancelListener);
+
+		final Button customLayoutBtn = (Button) layoutSettingsDlg.findViewById(R.id.customLayoutBtn);
+		customLayoutBtn.setOnClickListener(showCustomLayoutSettingUI);
+
+		final Button defaultLayoutBtn = (Button) layoutSettingsDlg.findViewById(R.id.defaultLayoutBtn);
+		defaultLayoutBtn.setOnClickListener(showDefaultLayoutSettingUI);
+
+		layoutSettingsDlg.show();
+	}
 }

@@ -227,7 +227,9 @@ public class DialogHelper {
 	        break;
 	    case DIALOG_OPTIONS:
 	    case DIALOG_FULLSCREEN:	
-	    	final CharSequence[] items1 = {"Load State", "Save State","Help","Settings", "Netplay" /*"Support",*/};	    	
+//	    	final CharSequence[] items1 = {"Load State", "Save State","Help","Settings", "Netplay" /*"Support",*/};
+		   	final CharSequence[] items1 = {"Resume", "Netplay","UI Customization","Exit Game"};
+
 	    	final CharSequence[] items2 = {"Help","Settings", "Netplay"/*"Support"*/};	
 	    	final CharSequence[] items3 = {"Exit","Load State", "Save State","Help","Settings", "Netplay"/*"Support",*/};	    	
 	    	final CharSequence[] items4 = {"Exit","Help","Settings", "Netplay" /*"Support"*/};	
@@ -236,7 +238,7 @@ public class DialogHelper {
 	    	final int b = Emulator.isInMAME() ? 0 : 2;
 	    	
 	    	if(a == 1)
-	    	   builder.setTitle("Choose an option from the menu.");
+	    	   builder.setTitle("[OPTION]");
 	    	
 	    	builder.setCancelable(true);
 	    	builder.setItems(Emulator.isInMAME() ? (id==DIALOG_OPTIONS?items1:items3) : (id==DIALOG_OPTIONS?items2:items4), new DialogInterface.OnClickListener() {
@@ -255,7 +257,9 @@ public class DialogHelper {
 					    mm.showDialog(DialogHelper.DIALOG_EXIT);
 				    else
 				    	mm.showDialog(DialogHelper.DIALOG_EXIT_GAME);
-    	          } else if (item == 1-a &&  b==0){ Emulator.setValue(Emulator.LOADSTATE, 1);Emulator.resume();
+    	          }
+    	          /*
+    	          else if (item == 1-a &&  b==0){ Emulator.setValue(Emulator.LOADSTATE, 1);Emulator.resume();
     	          } else if (item == 2-a &&  b==0){ Emulator.setValue(Emulator.SAVESTATE, 1);Emulator.resume();		    	        
     	          } else if (item == 3-a-b){ mm.getMainHelper().showHelp();
     	          } else if (item == 4-a-b){ mm.getMainHelper().showSettings();
@@ -264,9 +268,48 @@ public class DialogHelper {
     	              //mm.getNetPlay().showView();
     	        	  mm.getNetPlay().createDialog();
     	              
+    	          }*/
+    	          else if (item == 1-a &&  b==0) // Resume button
+    	          {
+					  Emulator.resume();
     	          }
-		    	    
-  	        	  DialogHelper.savedDialog = DIALOG_NONE;
+				  else if (item == 2-a &&  b==0)  // Netplay button
+				  {
+					  mm.getNetPlay().createDialog();
+				  }
+			      else if (item == 3-a-b)  // UI Customization button
+			      {
+//					  mm.getMainHelper().showSettings();
+					  mm.getPrefsHelper().createLayoutSettingsDialog();
+
+				  }
+				  else if (item == 4-a-b)  // Exit button
+				  {
+					  if(Emulator.isInMenu())
+					  {
+						  Emulator.setValue(Emulator.EXIT_GAME_KEY, 1);
+						  try {Thread.sleep(100);} catch (InterruptedException e) {}
+						  Emulator.setValue(Emulator.EXIT_GAME_KEY, 0);
+					  }
+					  else if(!Emulator.isInMAME())
+					  {
+						  mm.showDialog(DialogHelper.DIALOG_EXIT);
+					  }
+					  else
+					  {
+						  if(mm.getPrefsHelper().isWarnOnExit())
+							  mm.showDialog(DialogHelper.DIALOG_EXIT_GAME);
+						  else
+						  {
+							  Emulator.setValue(Emulator.EXIT_GAME_KEY, 1);
+							  try {Thread.sleep(100);} catch (InterruptedException e) {}
+							  Emulator.setValue(Emulator.EXIT_GAME_KEY, 0);
+						  }
+					  }
+				  }
+
+
+					  DialogHelper.savedDialog = DIALOG_NONE;
   	        	  mm.removeDialog(DIALOG_OPTIONS);
   	        	  mm.removeDialog(DIALOG_FULLSCREEN);
 	    	    }	    	 

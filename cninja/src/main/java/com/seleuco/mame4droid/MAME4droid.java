@@ -71,6 +71,7 @@ import com.seleuco.mame4droid.input.ControlCustomizer;
 import com.seleuco.mame4droid.input.InputHandler;
 import com.seleuco.mame4droid.input.InputHandlerExt;
 import com.seleuco.mame4droid.input.InputHandlerFactory;
+import com.seleuco.mame4droid.prefs.UserPreferences;
 import com.seleuco.mame4droid.views.IEmuView;
 import com.seleuco.mame4droid.views.InputView;
 import com.seleuco.mame4droid.R;
@@ -199,7 +200,7 @@ public class MAME4droid extends Activity {
         fileExplore = new FileExplorer(this);
         
         netPlay = new NetPlay(this);
-                
+
         menuHelper = new MenuHelper(this);
                 
         inputHandler = InputHandlerFactory.createInputHandler(this);
