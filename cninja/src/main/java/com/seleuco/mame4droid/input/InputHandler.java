@@ -708,7 +708,7 @@ public class InputHandler implements OnTouchListener, OnKeyListener, IController
 								{									    		 
 									 newtouches[id] |= getButtonValue(iv.getValue(),true);
 									 //sunghook
-									 if(iv.getValue()==BTN_EXIT && actionEvent!=MotionEvent.ACTION_MOVE)
+									 /*if(iv.getValue()==BTN_EXIT && actionEvent!=MotionEvent.ACTION_MOVE)
 									 {
 									    if(Emulator.isInMenu())
 									    {
@@ -721,7 +721,7 @@ public class InputHandler implements OnTouchListener, OnKeyListener, IController
 									    else
 									        mm.showDialog(DialogHelper.DIALOG_EXIT_GAME);
 									 }
-									 else if(iv.getValue()==BTN_OPTION)
+									 else */if(iv.getValue()==BTN_OPTION)
 									 {
 										 mm.showDialog(DialogHelper.DIALOG_OPTIONS);
 									 }

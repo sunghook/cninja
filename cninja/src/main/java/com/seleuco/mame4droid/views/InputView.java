@@ -389,7 +389,7 @@ public class InputView extends ImageView {
 
         	//sunghook
 		//if(d!=null && v.getValue()!=InputHandler.BTN_EXIT && v.getValue()!=InputHandler.BTN_OPTION)
-		if(d!=null)
+		if(d!=null && v.getValue()!=InputHandler.BTN_EXIT )
         	{
         		d.setBounds(v.getRect());
         		d.draw(canvas);
