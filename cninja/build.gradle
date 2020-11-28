@@ -1,20 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "27.0.3"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
 
     defaultConfig {
         applicationId "com.dragofly.cninja"
         minSdkVersion 21
-        targetSdkVersion defaultTargetSdkVersion
+        targetSdkVersion 29
 
         ndk {
             moduleName "mame4droid-jni"
             //ndkVersion '21.3.6528147'
         }
     }
-
+    useLibrary 'org.apache.http.legacy'
     buildTypes {
         release {
             minifyEnabled false

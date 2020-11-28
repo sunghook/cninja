@@ -85,14 +85,22 @@ final class NotificationHelper
                         notificationManager = (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
                 int icon = R.drawable.icon_sb; // TODO: don't hard-code
                 long when = System.currentTimeMillis();
-                Notification notification = new Notification(icon, /*onShow*/null, when);
+
+				Intent notificationIntent = new Intent(ctx, MAME4droid.class);
+				PendingIntent pendingIntent = PendingIntent.getActivity(ctx, 0, new Intent(ctx, MAME4droid.class), PendingIntent.FLAG_UPDATE_CURRENT);
+				//Notification notification = new Notification(icon, /*onShow*/null, when);
+				Notification notification = new Notification.Builder(ctx).setContentTitle(title)
+																		.setContentText(message)
+																		.setSmallIcon(icon)
+																		.setWhen(when)
+																		.setContentIntent(pendingIntent)
+																		.setDefaults(Notification.FLAG_ONGOING_EVENT | Notification.FLAG_AUTO_CANCEL)
+																		.build();
+
                 notification.flags |= Notification.FLAG_ONGOING_EVENT | Notification.FLAG_AUTO_CANCEL;
-                CharSequence contentTitle = title;
-                CharSequence contentText = message;
-                Intent notificationIntent = new Intent(ctx, MAME4droid.class);
                 PendingIntent contentIntent = PendingIntent.getActivity(ctx, 0, notificationIntent, 0);
 
-                notification.setLatestEventInfo(ctx, contentTitle, contentText, contentIntent);
+        //        notification.setLatestEventInfo(ctx, contentTitle, contentText, contentIntent);
                 notificationManager.notify(1, notification);
         }
        
