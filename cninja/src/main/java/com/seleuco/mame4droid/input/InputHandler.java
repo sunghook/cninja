@@ -708,23 +708,23 @@ public class InputHandler implements OnTouchListener, OnKeyListener, IController
 								{									    		 
 									 newtouches[id] |= getButtonValue(iv.getValue(),true);
 									 //sunghook
-//									 if(iv.getValue()==BTN_EXIT && actionEvent!=MotionEvent.ACTION_MOVE)
-//									 {
-//									    if(Emulator.isInMenu())
-//									    {
-//						    		        Emulator.setValue(Emulator.EXIT_GAME_KEY, 1);
-//					    			    	try {Thread.sleep(100);} catch (InterruptedException e) {}
-//					    					Emulator.setValue(Emulator.EXIT_GAME_KEY, 0);
-//									    }
-//									    else if(!Emulator.isInMAME())
-//										    mm.showDialog(DialogHelper.DIALOG_EXIT);
-//									    else
-//									        mm.showDialog(DialogHelper.DIALOG_EXIT_GAME);
-//									 }
-//									 else if(iv.getValue()==BTN_OPTION)
-//									 {
-//										 mm.showDialog(DialogHelper.DIALOG_OPTIONS);
-//									 }
+									 if(iv.getValue()==BTN_EXIT && actionEvent!=MotionEvent.ACTION_MOVE)
+									 {
+									    if(Emulator.isInMenu())
+									    {
+						    		        Emulator.setValue(Emulator.EXIT_GAME_KEY, 1);
+					    			    	try {Thread.sleep(100);} catch (InterruptedException e) {}
+					    					Emulator.setValue(Emulator.EXIT_GAME_KEY, 0);
+									    }
+									    else if(!Emulator.isInMAME())
+										    mm.showDialog(DialogHelper.DIALOG_EXIT);
+									    else
+									        mm.showDialog(DialogHelper.DIALOG_EXIT_GAME);
+									 }
+									 else if(iv.getValue()==BTN_OPTION)
+									 {
+										 mm.showDialog(DialogHelper.DIALOG_OPTIONS);
+									 }
 								}
 								else if(mm.getPrefsHelper().getControllerType() == PrefsHelper.PREF_DIGITAL_DPAD
 										&& !((tiltSensor.isEnabled() || (mm.getPrefsHelper().isLightgun() && !(mm.getMainHelper().getscrOrientation() == Configuration.ORIENTATION_PORTRAIT &&  !mm.getPrefsHelper().isPortraitFullscreen()) )) 
