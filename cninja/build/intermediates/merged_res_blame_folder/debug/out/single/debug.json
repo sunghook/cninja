@@ -1,0 +1,470 @@
+[
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_a_old.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_a_old.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_scanline_2.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/scanline_2.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_dpad_down.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/dpad_down.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_dpad_up.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/dpad_up.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/layout_bar.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/layout/bar.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_dpad_right.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/dpad_right.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_stick_up.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/stick_up.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_start.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_start.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/layout-land_emuview_sw.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/layout-land/emuview_sw.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_e.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_e.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_l1.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_l1.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_stick_up_left.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/stick_up_left.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_dpad_up_right.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/dpad_up_right.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_a_old_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_a_old_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_x_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_x_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/raw_controller_portrait.txt.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/raw/controller_portrait.txt"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_dpad_up_right.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/dpad_up_right.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_d_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_d_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/menu_menu.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/menu/menu.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/raw_controller_landscape_16_9.txt.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/raw/controller_landscape_16_9.txt"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_stick_up_right.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/stick_up_right.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_crt_2.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/crt_2.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_stick_inner.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/stick_inner.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_scanline_1.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/scanline_1.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_b_old_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_b_old_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_exit_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_exit_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_d.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_d.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_back_portrait.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/back_portrait.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/raw_stadhero.zip.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/raw/stadhero.zip"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_a_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_a_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_option.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_option.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_stick_right.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/stick_right.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_coin_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_coin_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_stick_down_right.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/stick_down_right.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_dpad_left.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/dpad_left.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_crt_1.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/crt_1.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_directory_up.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/directory_up.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/layout_main_fullscreen.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/layout/main_fullscreen.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/raw_ponpoko.zip.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/raw/ponpoko.zip"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_stick_up_left.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/stick_up_left.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_stick_down.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/stick_down.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-hdpi_fake.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-hdpi/fake.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_y.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_y.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/layout_emuview_gl.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/layout/emuview_gl.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_start_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_start_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/raw_controller_landscape.txt.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/raw/controller_landscape.txt"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_b_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_b_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_file_icon.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/file_icon.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/layout_webhelp.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/layout/webhelp.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_dpad_up.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/dpad_up.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_dpad_none.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/dpad_none.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/raw_files.zip.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/raw/files.zip"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_stick_down.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/stick_down.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_icon.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/icon.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_b.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_b.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-xhdpi_ouya_icon.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-xhdpi/ouya_icon.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_a.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_a.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/raw-large_controller_portrait.txt.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/raw-large/controller_portrait.txt"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_border_view.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/border_view.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/raw_robocop.zip.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/raw/robocop.zip"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_dpad_down_right.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/dpad_down_right.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_stick_down_left.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/stick_down_left.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_e_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_e_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/raw_controller_portrait_full.txt.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/raw/controller_portrait_full.txt"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_back_portrait.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/back_portrait.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_dpad_right.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/dpad_right.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_stick_up_right.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/stick_up_right.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_icon_sb.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/icon_sb.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_dpad_down.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/dpad_down.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/layout_emuview_sw.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/layout/emuview_sw.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_x.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_x.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_b_old.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_b_old.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_l1_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_l1_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_dpad_none.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/dpad_none.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_c_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_c_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_stick_right.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/stick_right.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/layout_main.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/layout/main.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_y_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_y_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-xhdpi_fake.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-xhdpi/fake.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_directory_icon2.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/directory_icon2.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/layout_emuview_gl_ext.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/layout/emuview_gl_ext.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_ponpoko.jpg.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/ponpoko.jpg"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_dpad_up_left.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/dpad_up_left.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/raw-large_controller_landscape.txt.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/raw-large/controller_landscape.txt"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_f.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_f.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_coin.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_coin.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_dpad_left.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/dpad_left.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_border_shape.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/border_shape.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_dpad_down_right.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/dpad_down_right.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_stick_down_left.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/stick_down_left.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_f_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_f_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/xml_userpreferences.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/xml/userpreferences.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_r1_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_r1_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_dpad_up_left.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/dpad_up_left.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/layout_netplayview.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/layout/netplayview.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_stick_none.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/stick_none.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_stick_up.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/stick_up.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_bublbobl.jpg.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/bublbobl.jpg"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_c.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_c.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_directory_icon.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/directory_icon.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/raw-large_controller_portrait_full.txt.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/raw-large/controller_portrait_full.txt"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/layout-land_main.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/layout-land/main.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/layout_wifiwarnview.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/layout/wifiwarnview.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_dpad_down_left.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/dpad_down_left.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/raw_cninja.zip.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/raw/cninja.zip"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/layout-land_emuview_gl.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/layout-land/emuview_gl.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_stick_left.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/stick_left.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_stick_none.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/stick_none.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/layout-land_emuview_gl_ext.xml.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/layout-land/emuview_gl_ext.xml"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_exit.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_exit.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_option_press.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_option_press.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_dpad_down_left.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/dpad_down_left.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/raw-large_controller_landscape_16_9.txt.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/raw-large/controller_landscape_16_9.txt"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_stick_outer.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/stick_outer.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_stick_down_right.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/stick_down_right.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable-large_stick_left.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable-large/stick_left.png"
+    },
+    {
+        "merged": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/build/intermediates/res/merged/debug/drawable_button_r1.png.flat",
+        "source": "/home/sunghook/work/DGCON/mame_cninja/android_part/cninja/cninja/src/main/res/drawable/button_r1.png"
+    }
+]
