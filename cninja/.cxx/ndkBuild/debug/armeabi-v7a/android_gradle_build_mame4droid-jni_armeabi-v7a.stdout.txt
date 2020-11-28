@@ -1,2 +1,0 @@
-[armeabi-v7a] Compile thumb  : mame4droid-jni <= mame4droid-jni.c
-[armeabi-v7a] SharedLibrary  : libmame4droid-jni.so
