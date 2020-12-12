@@ -771,7 +771,12 @@ public class InputHandler implements OnTouchListener, OnKeyListener, IController
 		handleImageStates(false);
 				
 		fixTiltCoin();
-		
+
+		//[CNINJA-005] Remove dipswitch (CONFIGURE menu combination keys : COIN + START. prevent the combination)
+		if(  ((pad_data[0] & START_VALUE) != 0)  && ((pad_data[0] & COIN_VALUE) != 0) )
+		{
+			pad_data[0] = pad_data[0] & (~START_VALUE);
+		}
 		Emulator.setPadData(0,pad_data[0]);
 		return true;
 	}	
