@@ -46,7 +46,7 @@
 
 //NOTAS: usar acelerometro es suficiente, 
 
-package com.seleuco.mame4droid.input;
+package com.projectgg.cninja.input;
 
 import java.text.DecimalFormat;
 
@@ -59,9 +59,9 @@ import android.hardware.SensorManager;
 import android.os.Build;
 import android.view.Surface;
 
-import com.seleuco.mame4droid.Emulator;
-import com.seleuco.mame4droid.MAME4droid;
-import com.seleuco.mame4droid.helpers.PrefsHelper;
+import com.projectgg.cninja.Emulator;
+import com.projectgg.cninja.MAME4droid;
+import com.projectgg.cninja.helpers.PrefsHelper;
 
 public class TiltSensor {
 	

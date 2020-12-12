@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.input;
+package com.projectgg.cninja.input;
 
 public interface IController {
 	

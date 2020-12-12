@@ -36,7 +36,7 @@
 
 #include <pthread.h>
 
-#include "com_seleuco_mame4droid_Emulator.h"
+#include "com.projectgg.cninja_Emulator.h"
 
 #define DEBUG 1
 
@@ -299,11 +299,11 @@ int JNI_OnLoad(JavaVM* vm, void* reserved)
         return -1;
     }
     
-    cEmulator = (*env)->FindClass (env, "com/seleuco/mame4droid/Emulator"); 
+    cEmulator = (*env)->FindClass (env, "com/projectgg/cninja/Emulator"); 
 
     if(cEmulator==NULL)
     {
-        __android_log_print(ANDROID_LOG_ERROR, "mame4droid-jni", "Failed to find class com.seleuco.mame4droid.Emulator");
+        __android_log_print(ANDROID_LOG_ERROR, "mame4droid-jni", "Failed to find class com/projectgg/cninja.Emulator");
         return -1;
     } 
 
@@ -368,7 +368,7 @@ void* app_Thread_Start(void* args)
     return NULL;
 }
 
-JNIEXPORT void JNICALL Java_com_seleuco_mame4droid_Emulator_init
+JNIEXPORT void JNICALL Java_com_projectgg_cninja_Emulator_init
   (JNIEnv *env, jclass c,  jstring s1, jstring s2)
 {
     __android_log_print(ANDROID_LOG_INFO, "mame4droid-jni", "init");
@@ -415,7 +415,7 @@ JNIEXPORT void JNICALL Java_com_seleuco_mame4droid_Emulator_init
     */  
 }
 
-JNIEXPORT void JNICALL Java_com_seleuco_mame4droid_Emulator_setPadData
+JNIEXPORT void JNICALL Java_com_projectgg_cninja_Emulator_setPadData
   (JNIEnv *env, jclass c, jint i,  jlong jl)
 {
     //long 	jlong 	signed 64 bits ??? valdria con un jint
@@ -429,7 +429,7 @@ JNIEXPORT void JNICALL Java_com_seleuco_mame4droid_Emulator_setPadData
       __android_log_print(ANDROID_LOG_WARN, "mame4droid-jni", "error no setPadStatus!");
 }
 
-JNIEXPORT void JNICALL Java_com_seleuco_mame4droid_Emulator_setAnalogData
+JNIEXPORT void JNICALL Java_com_projectgg_cninja_Emulator_setAnalogData
   (JNIEnv *env, jclass c, jint i, jfloat v1, jfloat v2)
 {
     if(setMyAnalogData!=NULL)
@@ -438,7 +438,7 @@ JNIEXPORT void JNICALL Java_com_seleuco_mame4droid_Emulator_setAnalogData
       __android_log_print(ANDROID_LOG_WARN, "mame4droid-jni", "error no setMyAnalogData!");
 }
 
-JNIEXPORT jint JNICALL Java_com_seleuco_mame4droid_Emulator_getValue
+JNIEXPORT jint JNICALL Java_com_projectgg_cninja_Emulator_getValue
   (JNIEnv *env, jclass c, jint key, jint i)
 {
 #ifdef DEBUG
@@ -453,7 +453,7 @@ JNIEXPORT jint JNICALL Java_com_seleuco_mame4droid_Emulator_getValue
       }
 }
 
-JNIEXPORT void JNICALL Java_com_seleuco_mame4droid_Emulator_setValue
+JNIEXPORT void JNICALL Java_com_projectgg_cninja_Emulator_setValue
   (JNIEnv *env, jclass c, jint key, jint i, jint value)
 {
 #ifdef DEBUG
@@ -465,7 +465,7 @@ JNIEXPORT void JNICALL Java_com_seleuco_mame4droid_Emulator_setValue
       __android_log_print(ANDROID_LOG_WARN, "mame4droid-jni", "error no setMyValue!");
 }
 
-JNIEXPORT jstring JNICALL Java_com_seleuco_mame4droid_Emulator_getValueStr
+JNIEXPORT jstring JNICALL Java_com_projectgg_cninja_Emulator_getValueStr
   (JNIEnv *env, jclass c, jint key, jint i)
 {
 #ifdef DEBUG
@@ -483,7 +483,7 @@ JNIEXPORT jstring JNICALL Java_com_seleuco_mame4droid_Emulator_getValueStr
       }
 }
 
-JNIEXPORT void JNICALL Java_com_seleuco_mame4droid_Emulator_setValueStr
+JNIEXPORT void JNICALL Java_com_projectgg_cninja_Emulator_setValueStr
   (JNIEnv *env, jclass c, jint key, jint i, jstring s1)
 {
     if(setMyValueStr!=NULL)
@@ -499,7 +499,7 @@ JNIEXPORT void JNICALL Java_com_seleuco_mame4droid_Emulator_setValueStr
       __android_log_print(ANDROID_LOG_WARN, "mame4droid-jni", "error no setMyValueStr!");
 }
 
-JNIEXPORT void JNICALL Java_com_seleuco_mame4droid_Emulator_runT
+JNIEXPORT void JNICALL Java_com_projectgg_cninja_Emulator_runT
   (JNIEnv *env, jclass c){
 #ifdef DEBUG
     __android_log_print(ANDROID_LOG_DEBUG, "mame4droid-jni", "runThread");
@@ -510,7 +510,7 @@ JNIEXPORT void JNICALL Java_com_seleuco_mame4droid_Emulator_runT
        __android_log_print(ANDROID_LOG_WARN, "mame4droid-jni", "error no android main!");
 }
 
-JNIEXPORT void JNICALL Java_com_seleuco_mame4droid_Emulator_runVideoT
+JNIEXPORT void JNICALL Java_com_projectgg_cninja_Emulator_runVideoT
   (JNIEnv *env, jclass c){
 #ifdef DEBUG
     __android_log_print(ANDROID_LOG_DEBUG, "mame4droid-jni", "runVideoThread");
@@ -521,7 +521,7 @@ JNIEXPORT void JNICALL Java_com_seleuco_mame4droid_Emulator_runVideoT
       __android_log_print(ANDROID_LOG_WARN, "mame4droid-jni", "error no droid_video_thread!");
 }
 
-JNIEXPORT jint JNICALL Java_com_seleuco_mame4droid_Emulator_netplayInit
+JNIEXPORT jint JNICALL Java_com_projectgg_cninja_Emulator_netplayInit
   (JNIEnv *env, jclass c, jstring addr, jint port, jint join){
 #ifdef DEBUG
     __android_log_print(ANDROID_LOG_DEBUG, "mame4droid-jni", "netplayInit");

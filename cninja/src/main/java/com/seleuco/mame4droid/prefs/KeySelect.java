@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.prefs;
+package com.projectgg.cninja.prefs;
 
 
 import android.app.Activity;

@@ -70,7 +70,7 @@
 			android:title="Auto switch resolution" android:summary="Enable it to auto swith game resolution to original minumun (Performance) regardless of emulation resolution (but ROM manager)"
 			android:defaultValue="true"/>
 	   							
-		<com.seleuco.mame4droid.prefs.ListPrefWithWarn
+		<com.projectgg.cninja.prefs.ListPrefWithWarn
 			android:entries="@array/pref_resolution_options"
 			android:title='Emulated resolution'			
 			android:key="PREF_GLOBAL_RESOLUTION_3"
@@ -104,7 +104,7 @@
 			android:entryValues="@array/pref_frameskip_values"
 			android:defaultValue="-1" />
 	    	    	    	    
-	    <com.seleuco.mame4droid.prefs.ListPrefWithWarn
+	    <com.projectgg.cninja.prefs.ListPrefWithWarn
 			android:entries="@array/pref_sound_options"
 			android:title='Sound'			
 			android:key="PREF_GLOBAL_SOUND"
@@ -119,7 +119,7 @@
 			android:title="Show info/warnings" android:summary="Shows Game Info and any warnings when a game is selected"
 			android:defaultValue="true" />
 	    	   	 
-	   	<com.seleuco.mame4droid.prefs.CheckBoxPrefWithWarn android:key="PREF_GLOBAL_CHEAT"
+	   	<com.projectgg.cninja.prefs.CheckBoxPrefWithWarn android:key="PREF_GLOBAL_CHEAT"
 			android:title="Cheats" android:summary="Enables the reading of the cheat database"
 			android:defaultValue="false" />
 	<!--     	
@@ -139,7 +139,7 @@
 			android:entryValues="@array/pref_px_values"
 			android:defaultValue="0" />	    
 			
-        <com.seleuco.mame4droid.prefs.EditTextPrefWithWarn
+        <com.projectgg.cninja.prefs.EditTextPrefWithWarn
             android:dialogTitle="Hz"
             android:key="PREF_GLOBAL_REFRESH"
             android:title="Forced refresh rate"
@@ -147,11 +147,11 @@
             android:inputType="numberDecimal"            
             />	 
                         	   	   	    
-	    <com.seleuco.mame4droid.prefs.CheckBoxPrefWithWarn android:key="PREF_GLOBAL_HISCORE"
+	    <com.projectgg.cninja.prefs.CheckBoxPrefWithWarn android:key="PREF_GLOBAL_HISCORE"
 			android:title="Save hiscores" android:summary="If enabled, saves hiscores on some games not saving on NVRAM. It could cause problems with some games or save states"
 			android:defaultValue="false" />	
 			
-	    <com.seleuco.mame4droid.prefs.ListPrefWithWarn
+	    <com.projectgg.cninja.prefs.ListPrefWithWarn
 			android:entries="@array/pref_bios_options"
 			android:title='Custom BIOS'			
 			android:key="PREF_BIOS"
@@ -161,15 +161,15 @@
 	    <PreferenceScreen android:key="vector" android:title="Vector" 
 	        android:summary="Select it to open vector games options" android:persistent="false">			
 															
-	    <com.seleuco.mame4droid.prefs.CheckBoxPrefWithWarn android:key="PREF_BEAM2X"
+	    <com.projectgg.cninja.prefs.CheckBoxPrefWithWarn android:key="PREF_BEAM2X"
 			android:title="Beam 2x" android:summary="Sets the width of the vectors to 2x"
 			android:defaultValue="true" />					
 
-	    <com.seleuco.mame4droid.prefs.CheckBoxPrefWithWarn android:key="PREF_ANTIALIAS"
+	    <com.projectgg.cninja.prefs.CheckBoxPrefWithWarn android:key="PREF_ANTIALIAS"
 			android:title="Antialias" android:summary="Enables antialiased line rendering for vector games"
 			android:defaultValue="true" />	    
 
-	    <com.seleuco.mame4droid.prefs.CheckBoxPrefWithWarn android:key="PREF_FLICKER"
+	    <com.projectgg.cninja.prefs.CheckBoxPrefWithWarn android:key="PREF_FLICKER"
 			android:title="Flicker" android:summary="Simulates a vector flicker effect"
 			android:defaultValue="false" />	    	    
 	    
@@ -301,7 +301,7 @@
 			android:entryValues="@array/pref_dz_values"
 			android:defaultValue="3" android:dependency="PREF_TILT_SENSOR"/>
 			
-		<com.seleuco.mame4droid.prefs.SensitivityPrefScreen
+		<com.projectgg.cninja.prefs.SensitivityPrefScreen
 			android:key="PREF_TILT_SENSITIVITY" 
 			android:title="Sensitivity"
 			android:summary="Set tilt sensor sensitivity"
@@ -351,7 +351,7 @@
     <PreferenceScreen android:key="shieldInput" android:title="Nvidia Shield" 
 	    android:summary="Select it to open Nvidia Shield input options" android:persistent="false">
 		
-    	 <com.seleuco.mame4droid.prefs.CheckBoxPrefWithWarn android:key="PREF_MOUSE"
+    	 <com.projectgg.cninja.prefs.CheckBoxPrefWithWarn android:key="PREF_MOUSE"
 			android:title="Nvidia Shield mouse" android:summary="Enable Mouse support on Nvidia Shield devices. Also lets you use advanced arcade controllers features like X-Arcade Tankstick trackball on Nvidia Shield devices."
 			android:defaultValue="False" />
  
@@ -392,14 +392,14 @@
 		<PreferenceScreen android:key="changeRomPath"
 			android:title="Change ROMs path" android:summary="Change roms location. You have to move ROMs files manually" />
 		
-	    <com.seleuco.mame4droid.prefs.ListPrefWithWarn
+	    <com.projectgg.cninja.prefs.ListPrefWithWarn
 			android:entries="@array/pref_image_effect_options"
 			android:title='Image enhancer'			
 			android:key="PREF_GLOBAL_IMAGE_EFFECT"
 			android:entryValues="@array/pref_image_effect_values"
 			android:defaultValue="0" />
 	    
-        <com.seleuco.mame4droid.prefs.CheckBoxPrefWithWarn android:key="PREF_RENDER_RGB"
+        <com.projectgg.cninja.prefs.CheckBoxPrefWithWarn android:key="PREF_RENDER_RGB"
 			android:title="True RGB" android:summary="Render in true color at the expense of performance"
 			android:defaultValue="False" /> 	    					
 	    			    	    
@@ -414,7 +414,7 @@
 			android:entryValues="@array/pref_overlay_intensity_values"
 			android:defaultValue="2" />-->	
 			
-	    <com.seleuco.mame4droid.prefs.ListPrefWithWarn android:key="PREF_GLOBAL_NAVBAR_MODE"
+	    <com.projectgg.cninja.prefs.ListPrefWithWarn android:key="PREF_GLOBAL_NAVBAR_MODE"
 			android:title="Navigation bar mode"
 			android:entries="@array/pref_navbar_options"
 			android:entryValues="@array/pref_navbar_values"
@@ -448,43 +448,43 @@
     <PreferenceScreen android:key="advanced" android:title="Advanced" 
         android:summary="Select it to open advanced options" android:persistent="false">
 	    
-       <com.seleuco.mame4droid.prefs.ListPrefWithWarn
+       <com.projectgg.cninja.prefs.ListPrefWithWarn
 			android:entries="@array/pref_global_video_render_options"
 			android:title='Video engine'			
 			android:key="PREF_GLOBAL_VIDEO_RENDER_MODE_2"
 			android:entryValues="@array/pref_global_video_render_values"
 			android:defaultValue="2" />
        
-		<com.seleuco.mame4droid.prefs.ListPrefWithWarn android:entries="@array/pref_sound_engine_options"
+		<com.projectgg.cninja.prefs.ListPrefWithWarn android:entries="@array/pref_sound_engine_options"
 			android:title='Sound engine' android:key="PREF_SOUND_ENGINE"
 			android:entryValues="@array/pref_sound_engine_values"
 			android:defaultValue="1" />       
         
-        <com.seleuco.mame4droid.prefs.CheckBoxPrefWithWarn android:key="PREF_THREADED_VIDEO"
+        <com.projectgg.cninja.prefs.CheckBoxPrefWithWarn android:key="PREF_THREADED_VIDEO"
 			android:title="Threaded video render" android:summary="Performance boost on double core devices. Disable it for hi-res emulated resolutions if you have artifacts or tearing at the expense of performance"
 			android:defaultValue="True" />	
 			      			
-		<com.seleuco.mame4droid.prefs.ListPrefWithWarn android:entries="@array/pref_low_norm_or_hight_options"
+		<com.projectgg.cninja.prefs.ListPrefWithWarn android:entries="@array/pref_low_norm_or_hight_options"
 			android:title='Video thread priority' android:key="PREF_VIDEO_THREAD_PRIORITY"
 			android:entryValues="@array/pref_low_norm_or_hight_values"
 			android:defaultValue="2" android:dependency="PREF_THREADED_VIDEO"/>
 		
-        <com.seleuco.mame4droid.prefs.CheckBoxPrefWithWarn android:key="PREF_DOUBLE_BUFFER"
+        <com.projectgg.cninja.prefs.CheckBoxPrefWithWarn android:key="PREF_DOUBLE_BUFFER"
 			android:title="Double buffer" android:summary="Avoids flickering at the expense of performance"
 			android:defaultValue="True" />
                		
-		<com.seleuco.mame4droid.prefs.ListPrefWithWarn android:entries="@array/pref_low_norm_or_hight_options"
+		<com.projectgg.cninja.prefs.ListPrefWithWarn android:entries="@array/pref_low_norm_or_hight_options"
 			android:title='Main thread priority' android:key="PREF_MAIN_THREAD_PRIORITY"
 			android:entryValues="@array/pref_low_norm_or_hight_values"
 			android:defaultValue="2" />
 		 
-        <com.seleuco.mame4droid.prefs.EditTextPrefWithWarn
+        <com.projectgg.cninja.prefs.EditTextPrefWithWarn
                 android:dialogTitle="Change installation path:"
                 android:key="PREF_INSTALLATION_DIR"
                 android:title="Installation path"
                 android:defaultValue=""/>		
 		 
-        <com.seleuco.mame4droid.prefs.CheckBoxPrefWithWarn android:key="PREF_FORCE_ALTGLPATH"
+        <com.projectgg.cninja.prefs.CheckBoxPrefWithWarn android:key="PREF_FORCE_ALTGLPATH"
 			android:title="Alternate OpenGL path" android:summary="Enable alternate OpenGL render path. Could be faster than default path but not work on some devices (like overlay rendering)"
 			android:defaultValue="False" />				
 			

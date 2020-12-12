@@ -42,9 +42,9 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.input;
+package com.projectgg.cninja.input;
 
-//import static com.seleuco.mame4droid.input.InputHandlerExt.resetAutodetected;
+//import static com.projectgg.cninja.input.InputHandlerExt.resetAutodetected;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.hardware.input.InputManager;
@@ -57,11 +57,11 @@ import android.view.View;
 import android.view.View.OnGenericMotionListener;
 import android.widget.Toast;
 
-import com.seleuco.mame4droid.Emulator;
-import com.seleuco.mame4droid.MAME4droid;
-import com.seleuco.mame4droid.helpers.DialogHelper;
-import com.seleuco.mame4droid.helpers.MainHelper;
-import com.seleuco.mame4droid.helpers.PrefsHelper;
+import com.projectgg.cninja.Emulator;
+import com.projectgg.cninja.MAME4droid;
+import com.projectgg.cninja.helpers.DialogHelper;
+import com.projectgg.cninja.helpers.MainHelper;
+import com.projectgg.cninja.helpers.PrefsHelper;
 
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR1) 

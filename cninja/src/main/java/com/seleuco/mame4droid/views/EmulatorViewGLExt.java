@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.views; 
+package com.projectgg.cninja.views; 
 
 import android.content.Context;
 import android.os.Build;
@@ -51,10 +51,10 @@ import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.View;
 
-import com.seleuco.mame4droid.MAME4droid;
-import com.seleuco.mame4droid.helpers.DialogHelper;
-import com.seleuco.mame4droid.helpers.PrefsHelper;
-import com.seleuco.mame4droid.input.InputHandler;
+import com.projectgg.cninja.MAME4droid;
+import com.projectgg.cninja.helpers.DialogHelper;
+import com.projectgg.cninja.helpers.PrefsHelper;
+import com.projectgg.cninja.input.InputHandler;
 
 public class EmulatorViewGLExt extends EmulatorViewGL implements  android.view.View.OnSystemUiVisibilityChangeListener  {
 	

@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.input;
+package com.projectgg.cninja.input;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -64,11 +64,11 @@ import android.view.View;
 import android.view.View.OnKeyListener;
 import android.view.View.OnTouchListener;
 
-import com.seleuco.mame4droid.Emulator;
-import com.seleuco.mame4droid.MAME4droid;
-import com.seleuco.mame4droid.R;
-import com.seleuco.mame4droid.helpers.DialogHelper;
-import com.seleuco.mame4droid.helpers.PrefsHelper;
+import com.projectgg.cninja.Emulator;
+import com.projectgg.cninja.MAME4droid;
+import com.projectgg.cninja.R;
+import com.projectgg.cninja.helpers.DialogHelper;
+import com.projectgg.cninja.helpers.PrefsHelper;
 
 public class InputHandler implements OnTouchListener, OnKeyListener, IController{
 	

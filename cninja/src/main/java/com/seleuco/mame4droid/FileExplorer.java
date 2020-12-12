@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid;
+package com.projectgg.cninja;
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -59,8 +59,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
-import com.seleuco.mame4droid.helpers.DialogHelper;
-import com.seleuco.mame4droid.R;
+import com.projectgg.cninja.helpers.DialogHelper;
+import com.projectgg.cninja.R;
 
 public class FileExplorer {
 

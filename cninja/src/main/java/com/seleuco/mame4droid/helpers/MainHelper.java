@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.helpers;
+package com.projectgg.cninja.helpers;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -76,16 +76,16 @@ import android.view.View.MeasureSpec;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.Toast;
 
-import com.seleuco.mame4droid.Emulator;
-import com.seleuco.mame4droid.MAME4droid;
-import com.seleuco.mame4droid.R;
-import com.seleuco.mame4droid.WebHelpActivity;
-import com.seleuco.mame4droid.input.ControlCustomizer;
-import com.seleuco.mame4droid.input.InputHandler;
-import com.seleuco.mame4droid.prefs.GameFilterPrefs;
-import com.seleuco.mame4droid.prefs.UserPreferences;
-import com.seleuco.mame4droid.views.IEmuView;
-import com.seleuco.mame4droid.views.InputView;
+import com.projectgg.cninja.Emulator;
+import com.projectgg.cninja.MAME4droid;
+import com.projectgg.cninja.R;
+import com.projectgg.cninja.WebHelpActivity;
+import com.projectgg.cninja.input.ControlCustomizer;
+import com.projectgg.cninja.input.InputHandler;
+import com.projectgg.cninja.prefs.GameFilterPrefs;
+import com.projectgg.cninja.prefs.UserPreferences;
+import com.projectgg.cninja.views.IEmuView;
+import com.projectgg.cninja.views.InputView;
 
 public class MainHelper {
 	
@@ -123,7 +123,7 @@ public class MainHelper {
 			lib_dir = mm.getApplicationInfo().nativeLibraryDir;
 		} catch (Exception e) {
 			e.printStackTrace();
-			lib_dir = "/data/data/com.seleuco.mame4droid/lib";
+			lib_dir = "/data/data/com.projectgg.cninja/lib";
 		}
 		return lib_dir;
 	}

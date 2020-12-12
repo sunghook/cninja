@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.views;
+package com.projectgg.cninja.views;
 
 import java.util.ArrayList;
 
@@ -54,9 +54,9 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.SurfaceHolder.Callback;
 
-import com.seleuco.mame4droid.Emulator;
-import com.seleuco.mame4droid.MAME4droid;
-import com.seleuco.mame4droid.helpers.PrefsHelper;
+import com.projectgg.cninja.Emulator;
+import com.projectgg.cninja.MAME4droid;
+import com.projectgg.cninja.helpers.PrefsHelper;
 
 
 public class EmulatorViewSW extends SurfaceView implements Callback, IEmuView{

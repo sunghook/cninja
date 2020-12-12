@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.helpers;
+package com.projectgg.cninja.helpers;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -58,13 +58,13 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import com.seleuco.mame4droid.Emulator;
-import com.seleuco.mame4droid.MAME4droid;
-import com.seleuco.mame4droid.R;
-import com.seleuco.mame4droid.input.ControlCustomizer;
-import com.seleuco.mame4droid.input.InputHandler;
-import com.seleuco.mame4droid.prefs.GameFilterPrefs;
-import com.seleuco.mame4droid.prefs.UserPreferences;
+import com.projectgg.cninja.Emulator;
+import com.projectgg.cninja.MAME4droid;
+import com.projectgg.cninja.R;
+import com.projectgg.cninja.input.ControlCustomizer;
+import com.projectgg.cninja.input.InputHandler;
+import com.projectgg.cninja.prefs.GameFilterPrefs;
+import com.projectgg.cninja.prefs.UserPreferences;
 
 public class PrefsHelper implements OnSharedPreferenceChangeListener
 {

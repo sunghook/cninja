@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid;
+package com.projectgg.cninja;
 
 import android.app.Activity;
 import android.graphics.Color;

@@ -1,4 +1,4 @@
-package com.seleuco.mame4droid.input;
+package com.projectgg.cninja.input;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

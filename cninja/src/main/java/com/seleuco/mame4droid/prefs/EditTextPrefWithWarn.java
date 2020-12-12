@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.prefs;
+package com.projectgg.cninja.prefs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -51,7 +51,7 @@ import android.content.DialogInterface;
 import android.preference.EditTextPreference;
 import android.util.AttributeSet;
 
-import com.seleuco.mame4droid.Emulator;
+import com.projectgg.cninja.Emulator;
 
 public class EditTextPrefWithWarn extends EditTextPreference {
 

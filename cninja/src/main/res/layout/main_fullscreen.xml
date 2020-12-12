@@ -4,7 +4,7 @@
 	android:layout_width="fill_parent" android:layout_height="fill_parent"
 	xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/emu_back_color">
 			
-	<com.seleuco.mame4droid.views.InputView android:id="@+id/InputView"
+	<com.projectgg.cninja.views.InputView android:id="@+id/InputView"
 		android:soundEffectsEnabled="false" android:visibility="visible"
 		android:adjustViewBounds="false" android:scaleType="fitXY"
 		android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_gravity="bottom|center_horizontal"/>

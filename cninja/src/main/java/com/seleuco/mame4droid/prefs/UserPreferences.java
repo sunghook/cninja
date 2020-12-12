@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.prefs;
+package com.projectgg.cninja.prefs;
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -61,12 +61,12 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 
-import com.seleuco.mame4droid.Emulator;
-import com.seleuco.mame4droid.R;
-import com.seleuco.mame4droid.helpers.PrefsHelper;
-import com.seleuco.mame4droid.input.ControlCustomizer;
-import com.seleuco.mame4droid.input.InputHandler;
-import com.seleuco.mame4droid.input.InputHandlerExt;
+import com.projectgg.cninja.Emulator;
+import com.projectgg.cninja.R;
+import com.projectgg.cninja.helpers.PrefsHelper;
+import com.projectgg.cninja.input.ControlCustomizer;
+import com.projectgg.cninja.input.InputHandler;
+import com.projectgg.cninja.input.InputHandlerExt;
 
 public class UserPreferences extends PreferenceActivity implements OnSharedPreferenceChangeListener {
 	

@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.input;
+package com.projectgg.cninja.input;
 
 import android.content.res.Configuration;
 import android.graphics.Canvas;
@@ -51,10 +51,10 @@ import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.view.MotionEvent;
 
-import com.seleuco.mame4droid.Emulator;
-import com.seleuco.mame4droid.MAME4droid;
-import com.seleuco.mame4droid.R;
-import com.seleuco.mame4droid.helpers.PrefsHelper;
+import com.projectgg.cninja.Emulator;
+import com.projectgg.cninja.MAME4droid;
+import com.projectgg.cninja.R;
+import com.projectgg.cninja.helpers.PrefsHelper;
 
 public class AnalogStick implements IController{
 	

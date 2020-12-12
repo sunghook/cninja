@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.prefs;
+package com.projectgg.cninja.prefs;
 
 import android.app.AlertDialog;
 import android.app.ListActivity;
@@ -57,8 +57,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.seleuco.mame4droid.R;
-import com.seleuco.mame4droid.input.InputHandlerExt;
+import com.projectgg.cninja.R;
+import com.projectgg.cninja.input.InputHandlerExt;
 
 public class DefineKeys extends ListActivity {
 		

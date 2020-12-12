@@ -13,7 +13,7 @@
 		
 	</FrameLayout>
 
-	<com.seleuco.mame4droid.views.InputView android:id="@+id/InputView" android:src="@drawable/back_portrait"
+	<com.projectgg.cninja.views.InputView android:id="@+id/InputView" android:src="@drawable/back_portrait"
 		android:layout_width="wrap_content" android:scaleType="fitXY" android:layout_height="wrap_content" android:adjustViewBounds="true" />
 
 </LinearLayout>

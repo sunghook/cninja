@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.views;
+package com.projectgg.cninja.views;
 
 import java.util.ArrayList;
 
@@ -58,14 +58,14 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.seleuco.mame4droid.Emulator;
-import com.seleuco.mame4droid.MAME4droid;
-import com.seleuco.mame4droid.R;
-import com.seleuco.mame4droid.helpers.PrefsHelper;
-import com.seleuco.mame4droid.input.ControlCustomizer;
-import com.seleuco.mame4droid.input.InputHandler;
-import com.seleuco.mame4droid.input.InputValue;
-import com.seleuco.mame4droid.input.TiltSensor;
+import com.projectgg.cninja.Emulator;
+import com.projectgg.cninja.MAME4droid;
+import com.projectgg.cninja.R;
+import com.projectgg.cninja.helpers.PrefsHelper;
+import com.projectgg.cninja.input.ControlCustomizer;
+import com.projectgg.cninja.input.InputHandler;
+import com.projectgg.cninja.input.InputValue;
+import com.projectgg.cninja.input.TiltSensor;
 
 public class InputView extends ImageView {
 		

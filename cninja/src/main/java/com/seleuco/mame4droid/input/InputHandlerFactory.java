@@ -42,13 +42,13 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.input;
+package com.projectgg.cninja.input;
 
 import java.lang.reflect.Method;
 
 import android.view.MotionEvent;
 
-import com.seleuco.mame4droid.MAME4droid;
+import com.projectgg.cninja.MAME4droid;
 
 public class InputHandlerFactory {
 	

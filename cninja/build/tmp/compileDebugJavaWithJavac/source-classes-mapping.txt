@@ -1,144 +1,149 @@
 com/seleuco/mame4droid/prefs/ListKeys.java
- com.seleuco.mame4droid.prefs.ListKeys
- com.seleuco.mame4droid.prefs.ListKeys$1
- com.seleuco.mame4droid.prefs.Modified
+ com.projectgg.cninja.prefs.ListKeys
+ com.projectgg.cninja.prefs.ListKeys$1
+ com.projectgg.cninja.prefs.Modified
 com/seleuco/mame4droid/helpers/DialogHelper.java
- com.seleuco.mame4droid.helpers.DialogHelper
- com.seleuco.mame4droid.helpers.DialogHelper$1
- com.seleuco.mame4droid.helpers.DialogHelper$10
- com.seleuco.mame4droid.helpers.DialogHelper$11
- com.seleuco.mame4droid.helpers.DialogHelper$12
- com.seleuco.mame4droid.helpers.DialogHelper$13
- com.seleuco.mame4droid.helpers.DialogHelper$14
- com.seleuco.mame4droid.helpers.DialogHelper$2
- com.seleuco.mame4droid.helpers.DialogHelper$3
- com.seleuco.mame4droid.helpers.DialogHelper$4
- com.seleuco.mame4droid.helpers.DialogHelper$5
- com.seleuco.mame4droid.helpers.DialogHelper$6
- com.seleuco.mame4droid.helpers.DialogHelper$7
- com.seleuco.mame4droid.helpers.DialogHelper$8
- com.seleuco.mame4droid.helpers.DialogHelper$9
+ com.projectgg.cninja.helpers.DialogHelper
+ com.projectgg.cninja.helpers.DialogHelper$1
+ com.projectgg.cninja.helpers.DialogHelper$10
+ com.projectgg.cninja.helpers.DialogHelper$11
+ com.projectgg.cninja.helpers.DialogHelper$12
+ com.projectgg.cninja.helpers.DialogHelper$13
+ com.projectgg.cninja.helpers.DialogHelper$14
+ com.projectgg.cninja.helpers.DialogHelper$2
+ com.projectgg.cninja.helpers.DialogHelper$3
+ com.projectgg.cninja.helpers.DialogHelper$4
+ com.projectgg.cninja.helpers.DialogHelper$5
+ com.projectgg.cninja.helpers.DialogHelper$6
+ com.projectgg.cninja.helpers.DialogHelper$7
+ com.projectgg.cninja.helpers.DialogHelper$8
+ com.projectgg.cninja.helpers.DialogHelper$9
 com/seleuco/mame4droid/prefs/SensitivityPrefScreen.java
- com.seleuco.mame4droid.prefs.SensitivityPrefScreen
+ com.projectgg.cninja.prefs.SensitivityPrefScreen
 com/seleuco/mame4droid/input/InputHandlerFactory.java
- com.seleuco.mame4droid.input.InputHandlerFactory
+ com.projectgg.cninja.input.InputHandlerFactory
 com/seleuco/mame4droid/input/InputHandlerExt.java
- com.seleuco.mame4droid.input.InputHandlerExt
+ com.projectgg.cninja.input.InputHandlerExt
 com/seleuco/mame4droid/helpers/PrefsHelper.java
- com.seleuco.mame4droid.helpers.PrefsHelper
+ com.projectgg.cninja.helpers.PrefsHelper
+ com.projectgg.cninja.helpers.PrefsHelper$1
+ com.projectgg.cninja.helpers.PrefsHelper$2
+ com.projectgg.cninja.helpers.PrefsHelper$3
+ com.projectgg.cninja.helpers.PrefsHelper$3$1
+ com.projectgg.cninja.helpers.PrefsHelper$3$2
 com/seleuco/mame4droid/NetPlay.java
- com.seleuco.mame4droid.NetPlay
- com.seleuco.mame4droid.NetPlay$1
- com.seleuco.mame4droid.NetPlay$2
- com.seleuco.mame4droid.NetPlay$3
- com.seleuco.mame4droid.NetPlay$3$1
- com.seleuco.mame4droid.NetPlay$3$2
- com.seleuco.mame4droid.NetPlay$4
- com.seleuco.mame4droid.NetPlay$5
- com.seleuco.mame4droid.NetPlay$6
- com.seleuco.mame4droid.NetPlay$6$1
- com.seleuco.mame4droid.NetPlay$6$2
- com.seleuco.mame4droid.NetPlay$6$3
- com.seleuco.mame4droid.NetPlay$7
- com.seleuco.mame4droid.NetPlay$8
- com.seleuco.mame4droid.NetPlay$8$1
+ com.projectgg.cninja.NetPlay
+ com.projectgg.cninja.NetPlay$1
+ com.projectgg.cninja.NetPlay$2
+ com.projectgg.cninja.NetPlay$3
+ com.projectgg.cninja.NetPlay$3$1
+ com.projectgg.cninja.NetPlay$3$2
+ com.projectgg.cninja.NetPlay$4
+ com.projectgg.cninja.NetPlay$5
+ com.projectgg.cninja.NetPlay$6
+ com.projectgg.cninja.NetPlay$6$1
+ com.projectgg.cninja.NetPlay$6$2
+ com.projectgg.cninja.NetPlay$6$3
+ com.projectgg.cninja.NetPlay$7
+ com.projectgg.cninja.NetPlay$8
+ com.projectgg.cninja.NetPlay$8$1
 com/seleuco/mame4droid/views/EmulatorViewGL.java
- com.seleuco.mame4droid.views.EmulatorViewGL
+ com.projectgg.cninja.views.EmulatorViewGL
 com/seleuco/mame4droid/input/InputValue.java
- com.seleuco.mame4droid.input.InputValue
+ com.projectgg.cninja.input.InputValue
 com/seleuco/mame4droid/helpers/MainHelper.java
- com.seleuco.mame4droid.helpers.MainHelper
- com.seleuco.mame4droid.helpers.MainHelper$1
+ com.projectgg.cninja.helpers.MainHelper
+ com.projectgg.cninja.helpers.MainHelper$1
 com/seleuco/mame4droid/input/AnalogStick.java
- com.seleuco.mame4droid.input.AnalogStick
+ com.projectgg.cninja.input.AnalogStick
 com/seleuco/mame4droid/prefs/UserPreferences.java
- com.seleuco.mame4droid.prefs.UserPreferences
- com.seleuco.mame4droid.prefs.UserPreferences$1
- com.seleuco.mame4droid.prefs.UserPreferences$10
- com.seleuco.mame4droid.prefs.UserPreferences$11
- com.seleuco.mame4droid.prefs.UserPreferences$2
- com.seleuco.mame4droid.prefs.UserPreferences$3
- com.seleuco.mame4droid.prefs.UserPreferences$4
- com.seleuco.mame4droid.prefs.UserPreferences$5
- com.seleuco.mame4droid.prefs.UserPreferences$6
- com.seleuco.mame4droid.prefs.UserPreferences$7
- com.seleuco.mame4droid.prefs.UserPreferences$8
- com.seleuco.mame4droid.prefs.UserPreferences$9
+ com.projectgg.cninja.prefs.UserPreferences
+ com.projectgg.cninja.prefs.UserPreferences$1
+ com.projectgg.cninja.prefs.UserPreferences$10
+ com.projectgg.cninja.prefs.UserPreferences$11
+ com.projectgg.cninja.prefs.UserPreferences$2
+ com.projectgg.cninja.prefs.UserPreferences$3
+ com.projectgg.cninja.prefs.UserPreferences$4
+ com.projectgg.cninja.prefs.UserPreferences$5
+ com.projectgg.cninja.prefs.UserPreferences$6
+ com.projectgg.cninja.prefs.UserPreferences$7
+ com.projectgg.cninja.prefs.UserPreferences$8
+ com.projectgg.cninja.prefs.UserPreferences$9
 com/seleuco/mame4droid/input/TiltSensor.java
- com.seleuco.mame4droid.input.TiltSensor
- com.seleuco.mame4droid.input.TiltSensor$1
+ com.projectgg.cninja.input.TiltSensor
+ com.projectgg.cninja.input.TiltSensor$1
 com/seleuco/mame4droid/Emulator.java
- com.seleuco.mame4droid.Emulator
- com.seleuco.mame4droid.Emulator$1
- com.seleuco.mame4droid.Emulator$2
- com.seleuco.mame4droid.Emulator$3
- com.seleuco.mame4droid.Emulator$4
- com.seleuco.mame4droid.Emulator$4$1
- com.seleuco.mame4droid.Emulator$5
+ com.projectgg.cninja.Emulator
+ com.projectgg.cninja.Emulator$1
+ com.projectgg.cninja.Emulator$2
+ com.projectgg.cninja.Emulator$3
+ com.projectgg.cninja.Emulator$4
+ com.projectgg.cninja.Emulator$4$1
+ com.projectgg.cninja.Emulator$5
 com/seleuco/mame4droid/prefs/CheckBoxPrefWithWarn.java
- com.seleuco.mame4droid.prefs.CheckBoxPrefWithWarn
- com.seleuco.mame4droid.prefs.CheckBoxPrefWithWarn$1
- com.seleuco.mame4droid.prefs.CheckBoxPrefWithWarn$2
+ com.projectgg.cninja.prefs.CheckBoxPrefWithWarn
+ com.projectgg.cninja.prefs.CheckBoxPrefWithWarn$1
+ com.projectgg.cninja.prefs.CheckBoxPrefWithWarn$2
 com/seleuco/mame4droid/views/EmulatorViewSW.java
- com.seleuco.mame4droid.views.EmulatorViewSW
+ com.projectgg.cninja.views.EmulatorViewSW
 com/seleuco/mame4droid/prefs/DefineKeys.java
- com.seleuco.mame4droid.prefs.DefineKeys
- com.seleuco.mame4droid.prefs.DefineKeys$1
- com.seleuco.mame4droid.prefs.DefineKeys$2
+ com.projectgg.cninja.prefs.DefineKeys
+ com.projectgg.cninja.prefs.DefineKeys$1
+ com.projectgg.cninja.prefs.DefineKeys$2
 com/seleuco/mame4droid/WebHelpActivity.java
- com.seleuco.mame4droid.WebHelpActivity
+ com.projectgg.cninja.WebHelpActivity
 com/seleuco/mame4droid/helpers/MenuHelper.java
- com.seleuco.mame4droid.helpers.MenuHelper
+ com.projectgg.cninja.helpers.MenuHelper
+com/projectgg/cninja/BuildConfig.java
+ com.projectgg.cninja.BuildConfig
 com/seleuco/mame4droid/MAME4droid.java
- com.seleuco.mame4droid.MAME4droid
- com.seleuco.mame4droid.NotificationHelper
+ com.projectgg.cninja.MAME4droid
+ com.projectgg.cninja.NotificationHelper
 com/seleuco/mame4droid/input/InputHandler.java
- com.seleuco.mame4droid.input.InputHandler
- com.seleuco.mame4droid.input.InputHandler$1
-com/seleuco/mame4droid/BuildConfig.java
- com.seleuco.mame4droid.BuildConfig
+ com.projectgg.cninja.input.InputHandler
+ com.projectgg.cninja.input.InputHandler$1
 com/seleuco/mame4droid/views/InputView.java
- com.seleuco.mame4droid.views.InputView
+ com.projectgg.cninja.views.InputView
 com/seleuco/mame4droid/input/ControlCustomizer.java
- com.seleuco.mame4droid.input.ControlCustomizer
+ com.projectgg.cninja.input.ControlCustomizer
 com/seleuco/mame4droid/prefs/KeySelect.java
- com.seleuco.mame4droid.prefs.KeySelect
- com.seleuco.mame4droid.prefs.KeySelect$1
- com.seleuco.mame4droid.prefs.KeySelect$1$1
- com.seleuco.mame4droid.prefs.KeySelect$2
- com.seleuco.mame4droid.prefs.KeySelect$2$1
- com.seleuco.mame4droid.prefs.KeySelect$3
- com.seleuco.mame4droid.prefs.KeySelect$4
+ com.projectgg.cninja.prefs.KeySelect
+ com.projectgg.cninja.prefs.KeySelect$1
+ com.projectgg.cninja.prefs.KeySelect$1$1
+ com.projectgg.cninja.prefs.KeySelect$2
+ com.projectgg.cninja.prefs.KeySelect$2$1
+ com.projectgg.cninja.prefs.KeySelect$3
+ com.projectgg.cninja.prefs.KeySelect$4
 com/seleuco/mame4droid/prefs/GameFilterPrefs.java
- com.seleuco.mame4droid.prefs.GameFilterPrefs
+ com.projectgg.cninja.prefs.GameFilterPrefs
 com/seleuco/mame4droid/SoundThread.java
- com.seleuco.mame4droid.SoundThread
+ com.projectgg.cninja.SoundThread
 com/seleuco/mame4droid/views/EmulatorViewGLExt.java
- com.seleuco.mame4droid.views.EmulatorViewGLExt
- com.seleuco.mame4droid.views.EmulatorViewGLExt$1
+ com.projectgg.cninja.views.EmulatorViewGLExt
+ com.projectgg.cninja.views.EmulatorViewGLExt$1
 com/seleuco/mame4droid/prefs/EditTextPrefWithWarn.java
- com.seleuco.mame4droid.prefs.EditTextPrefWithWarn
- com.seleuco.mame4droid.prefs.EditTextPrefWithWarn$1
- com.seleuco.mame4droid.prefs.EditTextPrefWithWarn$2
+ com.projectgg.cninja.prefs.EditTextPrefWithWarn
+ com.projectgg.cninja.prefs.EditTextPrefWithWarn$1
+ com.projectgg.cninja.prefs.EditTextPrefWithWarn$2
 com/seleuco/mame4droid/GLRenderer.java
- com.seleuco.mame4droid.GLRenderer
- com.seleuco.mame4droid.GLRenderer$1
+ com.projectgg.cninja.GLRenderer
+ com.projectgg.cninja.GLRenderer$1
 com/seleuco/mame4droid/input/IController.java
- com.seleuco.mame4droid.input.IController
+ com.projectgg.cninja.input.IController
 com/seleuco/mame4droid/input/Wrap_NVMouseExtensions.java
- com.seleuco.mame4droid.input.NVMouseExtensionException
- com.seleuco.mame4droid.input.Wrap_NVMouseExtensions
+ com.projectgg.cninja.input.NVMouseExtensionException
+ com.projectgg.cninja.input.Wrap_NVMouseExtensions
 com/seleuco/mame4droid/views/IEmuView.java
- com.seleuco.mame4droid.views.IEmuView
+ com.projectgg.cninja.views.IEmuView
 com/seleuco/mame4droid/prefs/ListPrefWithWarn.java
- com.seleuco.mame4droid.prefs.ListPrefWithWarn
- com.seleuco.mame4droid.prefs.ListPrefWithWarn$1
- com.seleuco.mame4droid.prefs.ListPrefWithWarn$2
+ com.projectgg.cninja.prefs.ListPrefWithWarn
+ com.projectgg.cninja.prefs.ListPrefWithWarn$1
+ com.projectgg.cninja.prefs.ListPrefWithWarn$2
 com/seleuco/mame4droid/FileExplorer.java
- com.seleuco.mame4droid.FileExplorer
- com.seleuco.mame4droid.FileExplorer$1
- com.seleuco.mame4droid.FileExplorer$2
- com.seleuco.mame4droid.FileExplorer$3
- com.seleuco.mame4droid.FileExplorer$4
- com.seleuco.mame4droid.FileExplorer$5
- com.seleuco.mame4droid.FileExplorer$Item
+ com.projectgg.cninja.FileExplorer
+ com.projectgg.cninja.FileExplorer$1
+ com.projectgg.cninja.FileExplorer$2
+ com.projectgg.cninja.FileExplorer$3
+ com.projectgg.cninja.FileExplorer$4
+ com.projectgg.cninja.FileExplorer$5
+ com.projectgg.cninja.FileExplorer$Item

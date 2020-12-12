@@ -42,9 +42,9 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.prefs;
+package com.projectgg.cninja.prefs;
 
-import com.seleuco.mame4droid.R;
+import com.projectgg.cninja.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;

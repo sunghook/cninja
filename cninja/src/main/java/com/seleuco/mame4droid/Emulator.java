@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid;
+package com.projectgg.cninja;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -74,8 +74,8 @@ import android.view.SurfaceHolder;
 import android.view.View;
 import android.widget.Toast;
 
-import com.seleuco.mame4droid.helpers.PrefsHelper;
-import com.seleuco.mame4droid.views.EmulatorViewGL;
+import com.projectgg.cninja.helpers.PrefsHelper;
+import com.projectgg.cninja.views.EmulatorViewGL;
  
 public class Emulator 
 {

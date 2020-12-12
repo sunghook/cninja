@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.input;
+package com.projectgg.cninja.input;
 
 import java.util.ArrayList;
 import java.util.StringTokenizer;
@@ -54,9 +54,9 @@ import android.graphics.Rect;
 import android.graphics.Paint.Style;
 import android.view.MotionEvent;
 
-import com.seleuco.mame4droid.Emulator;
-import com.seleuco.mame4droid.MAME4droid;
-import com.seleuco.mame4droid.helpers.PrefsHelper;
+import com.projectgg.cninja.Emulator;
+import com.projectgg.cninja.MAME4droid;
+import com.projectgg.cninja.helpers.PrefsHelper;
 
 public class ControlCustomizer {
 	

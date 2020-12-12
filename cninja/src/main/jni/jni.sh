@@ -1,1 +1,1 @@
-javah -classpath ../bin/classes com.seleuco.mame4droid.Emulator
+javah -classpath ../bin/classes com.projectgg.cninja.Emulator

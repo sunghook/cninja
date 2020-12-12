@@ -42,9 +42,9 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid.views;
+package com.projectgg.cninja.views;
 
-import com.seleuco.mame4droid.MAME4droid;
+import com.projectgg.cninja.MAME4droid;
 
 public interface IEmuView {
 	

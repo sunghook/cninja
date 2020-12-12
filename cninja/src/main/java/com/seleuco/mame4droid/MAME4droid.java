@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid;
+package com.projectgg.cninja;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -63,18 +63,18 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.seleuco.mame4droid.helpers.DialogHelper;
-import com.seleuco.mame4droid.helpers.MainHelper;
-import com.seleuco.mame4droid.helpers.MenuHelper;
-import com.seleuco.mame4droid.helpers.PrefsHelper;
-import com.seleuco.mame4droid.input.ControlCustomizer;
-import com.seleuco.mame4droid.input.InputHandler;
-import com.seleuco.mame4droid.input.InputHandlerExt;
-import com.seleuco.mame4droid.input.InputHandlerFactory;
-import com.seleuco.mame4droid.prefs.UserPreferences;
-import com.seleuco.mame4droid.views.IEmuView;
-import com.seleuco.mame4droid.views.InputView;
-import com.seleuco.mame4droid.R;
+import com.projectgg.cninja.helpers.DialogHelper;
+import com.projectgg.cninja.helpers.MainHelper;
+import com.projectgg.cninja.helpers.MenuHelper;
+import com.projectgg.cninja.helpers.PrefsHelper;
+import com.projectgg.cninja.input.ControlCustomizer;
+import com.projectgg.cninja.input.InputHandler;
+import com.projectgg.cninja.input.InputHandlerExt;
+import com.projectgg.cninja.input.InputHandlerFactory;
+import com.projectgg.cninja.prefs.UserPreferences;
+import com.projectgg.cninja.views.IEmuView;
+import com.projectgg.cninja.views.InputView;
+import com.projectgg.cninja.R;
 
 final class NotificationHelper
 {

@@ -42,7 +42,7 @@
  * under a MAME license, as set out in http://mamedev.org/
  */
 
-package com.seleuco.mame4droid;
+package com.projectgg.cninja;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;
@@ -66,8 +66,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.seleuco.mame4droid.helpers.PrefsHelper;
-import com.seleuco.mame4droid.R;
+import com.projectgg.cninja.helpers.PrefsHelper;
+import com.projectgg.cninja.R;
 
 
 public class NetPlay {
