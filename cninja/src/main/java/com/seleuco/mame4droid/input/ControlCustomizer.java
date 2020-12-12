@@ -43,7 +43,6 @@
  */
 
 package com.projectgg.cninja.input;
-
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
@@ -52,11 +51,20 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.Paint.Style;
+import android.renderscript.ScriptGroup;
+import android.util.Log;
 import android.view.MotionEvent;
 
 import com.projectgg.cninja.Emulator;
 import com.projectgg.cninja.MAME4droid;
+import com.projectgg.cninja.input.InputValue;
+import com.projectgg.cninja.input.InputHandler;
 import com.projectgg.cninja.helpers.PrefsHelper;
+
+import static com.projectgg.cninja.input.IController.BTN_C;
+import static com.projectgg.cninja.input.IController.BTN_D;
+import static com.projectgg.cninja.input.IController.BTN_E;
+import static com.projectgg.cninja.input.IController.BTN_F;
 
 public class ControlCustomizer {
 	
@@ -227,9 +235,22 @@ public class ControlCustomizer {
 				
 				for (int j = 0; j < values.size(); j++) 
 				{
-				    InputValue iv = values.get(j);
+					InputValue iv = values.get(j);
 
-      				if (iv.getRect().contains(x, y)) {
+        		   	/*[CNINJA-008] remove C D E F buttons from Button layout customizing UI
+					    ninja/src/main/res/raw/controller_landscape_16_9.txt
+			    		-> type 5 , C(1), D(0), E(4), F(5) button handle skip
+		   	    	*/
+					{
+						if(iv.getType() == InputHandler.TYPE_BUTTON_RECT){
+							int buttonId = iv.getValue();
+							if(buttonId == BTN_C || buttonId == BTN_D || buttonId == BTN_E || buttonId == BTN_F){
+								Log.d("tony", "tony skip2 draw type "+iv.getType() + " Id " + buttonId);
+								continue;
+							}
+						}
+					}
+					if (iv.getRect().contains(x, y)) {
 
 				    	if (iv.getType() == InputHandler.TYPE_BUTTON_RECT || iv.getType() == InputHandler.TYPE_STICK_IMG
 				    			|| iv.getType() == InputHandler.TYPE_ANALOG_RECT) {						
@@ -261,8 +282,23 @@ public class ControlCustomizer {
 		{
 		   InputValue v = ids.get(i);
 		   Rect r = v.getRect();
+
 		   if(r!=null  )
 		   {
+		   	   /*[CNINJA-008] remove C D E F buttons from Button layout customizing UI
+			      ninja/src/main/res/raw/controller_landscape_16_9.txt
+			      -> type 5 , C(1), D(0), E(4), F(5) img draw skip
+		   	    */
+			   {
+			       if(v.getType() == InputHandler.TYPE_BUTTON_RECT){
+			           int buttonId = v.getValue();
+			           if(buttonId == 1 || buttonId == 0 || buttonId == 4 || buttonId == 5){
+			           		Log.d("tony", "tony skip handle type "+v.getType() + " Id " + buttonId);
+			           		continue;
+					   }
+				   }
+			   }
+
 		       if (v.getType()==InputHandler.TYPE_BUTTON_RECT)
 		    	   canvas.drawRect(r, p2);
 		       else if(mm.getPrefsHelper().getControllerType() == PrefsHelper.PREF_DIGITAL_DPAD && v.getType()==InputHandler.TYPE_STICK_RECT)

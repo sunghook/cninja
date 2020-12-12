@@ -137,7 +137,7 @@ public class InputView extends ImageView {
 
 			btns_images[InputHandler.BTN_EXIT][InputHandler.BTN_NO_PRESS_STATE] 
 			                                 = (BitmapDrawable)mm.getResources().getDrawable(R.drawable.button_exit);
-			btns_images[InputHandler.BTN_EXIT][InputHandler.BTN_PRESS_STATE] 
+			btns_images[InputHandler.BTN_EXIT][InputHandler.BTN_PRESS_STATE]
 			                                 = (BitmapDrawable)mm.getResources().getDrawable(R.drawable.button_exit_press);
 	
 			btns_images[InputHandler.BTN_OPTION][InputHandler.BTN_NO_PRESS_STATE] 
@@ -383,7 +383,17 @@ public class InputView extends ImageView {
 	        	          if(b==InputHandler.BTN_E && n < 5)continue;
 	        	          if(b==InputHandler.BTN_F && n < 5)continue;
             	      }
-        	   }
+        		   	  /*[CNINJA-008] remove C D E F buttons from Button layout customizing UI
+					    ninja/src/main/res/raw/controller_landscape_16_9.txt
+			    		-> type 5 , C(1), D(0), E(4), F(5) button draw skip
+		   	          */
+            	      else {
+						  if(b==InputHandler.BTN_C )continue;
+						  if(b==InputHandler.BTN_D )continue;
+						  if(b==InputHandler.BTN_E )continue;
+						  if(b==InputHandler.BTN_F )continue;
+					  }
+			   }
         	   d = btns_images[v.getValue()][mm.getInputHandler().getBtnStates()[v.getValue()]];
         	} 
 
