@@ -47,7 +47,7 @@ android {
         implementation 'com.google.firebase:firebase-firestore'
 
         // add AdMob
-        implementation 'com.google.firebase:firebase-ads:18.0.0'
+        //implementation 'com.google.firebase:firebase-ads:18.0.0'
 
     }
 
