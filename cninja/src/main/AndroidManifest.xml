@@ -11,7 +11,7 @@
           android:smallScreens="true"
           android:anyDensity="true" android:resizeable="true"/>
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
-    <application android:icon="@drawable/ponpoko" android:label="@string/app_name" android:allowClearUserData="true" android:hardwareAccelerated="true" android:allowBackup="true" android:isGame="true">
+    <application android:icon="@drawable/cninja_icon" android:label="@string/app_name" android:allowClearUserData="true" android:hardwareAccelerated="true" android:allowBackup="true" android:isGame="true">
         <activity android:name="com.projectgg.cninja.MAME4droid" android:label="@string/app_name"
                   android:configChanges="keyboardHidden|orientation|screenSize"
                   android:launchMode="singleTask" 
