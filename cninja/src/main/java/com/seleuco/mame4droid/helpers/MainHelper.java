@@ -628,9 +628,12 @@ public class MainHelper {
 				if(h==0)h=1;
 				
 				//System.out.println("--->>> "+w+" "+h+ " "+w/h+ " "+ (float)(16.0/9.0));
-				
-			   	if(w/h != (float)(16.0/9.0) /*&& false*/)
-			   	{					   
+
+
+				//[CNINJA-006] reactive UI
+			   	//if(w/h != (float)(16.0/9.0) /*&& false*/)
+				if(w/h < (float)(16.0/9.0) /*&& false*/)
+				{
 				   inputHandler.readControllerValues(R.raw.controller_landscape);
 			   	}
 			   	else
