@@ -378,8 +378,8 @@ public class InputView extends ImageView {
 	        		      if(b==InputHandler.BTN_D && n < 4)continue;
 	        	          if(b==InputHandler.BTN_C && n < 3)continue;
 	        	          if(b==InputHandler.BTN_B && n < 2)continue;
-	        	          if(b==InputHandler.BTN_A && n < 1)continue;  
-	        	                            
+	        	          if(b==InputHandler.BTN_A && n < 1)continue;
+
 	        	          if(b==InputHandler.BTN_E && n < 5)continue;
 	        	          if(b==InputHandler.BTN_F && n < 5)continue;
             	      }
@@ -392,6 +392,7 @@ public class InputView extends ImageView {
 						  if(b==InputHandler.BTN_D )continue;
 						  if(b==InputHandler.BTN_E )continue;
 						  if(b==InputHandler.BTN_F )continue;
+						  if(b==InputHandler.BTN_EXIT )continue;
 					  }
 			   }
         	   d = btns_images[v.getValue()][mm.getInputHandler().getBtnStates()[v.getValue()]];

@@ -64,6 +64,7 @@ import com.projectgg.cninja.helpers.PrefsHelper;
 import static com.projectgg.cninja.input.IController.BTN_C;
 import static com.projectgg.cninja.input.IController.BTN_D;
 import static com.projectgg.cninja.input.IController.BTN_E;
+import static com.projectgg.cninja.input.IController.BTN_EXIT;
 import static com.projectgg.cninja.input.IController.BTN_F;
 
 public class ControlCustomizer {
@@ -244,7 +245,7 @@ public class ControlCustomizer {
 					{
 						if(iv.getType() == InputHandler.TYPE_BUTTON_RECT){
 							int buttonId = iv.getValue();
-							if(buttonId == BTN_C || buttonId == BTN_D || buttonId == BTN_E || buttonId == BTN_F){
+							if(buttonId == BTN_C || buttonId == BTN_D || buttonId == BTN_E || buttonId == BTN_F || buttonId == BTN_EXIT){
 								Log.d("tony", "tony skip2 draw type "+iv.getType() + " Id " + buttonId);
 								continue;
 							}
@@ -292,7 +293,7 @@ public class ControlCustomizer {
 			   {
 			       if(v.getType() == InputHandler.TYPE_BUTTON_RECT){
 			           int buttonId = v.getValue();
-			           if(buttonId == 1 || buttonId == 0 || buttonId == 4 || buttonId == 5){
+			           if(buttonId == BTN_C || buttonId == BTN_D || buttonId == BTN_E || buttonId == BTN_F || buttonId == BTN_EXIT){
 			           		Log.d("tony", "tony skip handle type "+v.getType() + " Id " + buttonId);
 			           		continue;
 					   }
