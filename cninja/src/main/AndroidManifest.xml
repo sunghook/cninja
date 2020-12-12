@@ -42,6 +42,7 @@
 		<activity android:name="com.projectgg.cninja.prefs.ListKeys" android:theme="@style/Theme.MAME4droid.TitleBar" android:label="MAME4droid Player Keys"/>
 		<activity android:name="com.projectgg.cninja.prefs.KeySelect" android:label="Select Key" android:theme="@android:style/Theme.Dialog"/>
 		<meta-data android:name="xperiaplayoptimized_content" android:resource="@drawable/icon"/>
+
     </application>    
     
 </manifest> 

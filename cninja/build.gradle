@@ -1,11 +1,13 @@
 apply plugin: 'com.android.application'
 
+apply plugin: 'com.google.gms.google-services'  // Google Services plugin
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
 
     defaultConfig {
-        applicationId "com.dragofly.cninja"
+        applicationId "com.projectgg.cninja"
         minSdkVersion 21
         targetSdkVersion 29
 
@@ -27,5 +29,27 @@ android {
         }
     }
     ndkVersion '21.1.6352462'
+
+    dependencies {
+        // ...
+
+        // Import the Firebase BoM
+        implementation platform('com.google.firebase:firebase-bom:25.12.0')
+
+        // When using the BoM, you don't specify versions in Firebase library dependencies
+
+        // Declare the dependency for the Firebase SDK for Google Analytics
+        implementation 'com.google.firebase:firebase-analytics'
+
+        // Declare the dependencies for any other desired Firebase products
+        // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
+        implementation 'com.google.firebase:firebase-auth'
+        implementation 'com.google.firebase:firebase-firestore'
+
+        // add AdMob
+        implementation 'com.google.firebase:firebase-ads:18.0.0'
+
+    }
+
 
 }

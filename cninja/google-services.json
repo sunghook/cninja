@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "753786177857",
+    "firebase_url": "https://cninja-7106a.firebaseio.com",
+    "project_id": "cninja-7106a",
+    "storage_bucket": "cninja-7106a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753786177857:android:76dba11430f993090879c0",
+        "android_client_info": {
+          "package_name": "com.projectgg.cninja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753786177857-ht3gtb3edf39027le2b9su289nfsh5bq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLwLgCIIyLvowPnf54Mr4dRVklaM1M4hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "753786177857-ht3gtb3edf39027le2b9su289nfsh5bq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
