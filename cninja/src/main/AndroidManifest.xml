@@ -43,6 +43,12 @@
 		<activity android:name="com.projectgg.cninja.prefs.KeySelect" android:label="Select Key" android:theme="@android:style/Theme.Dialog"/>
 		<meta-data android:name="xperiaplayoptimized_content" android:resource="@drawable/icon"/>
 
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3903577701358811~1049819646"/>
+
+
     </application>    
     
 </manifest> 
