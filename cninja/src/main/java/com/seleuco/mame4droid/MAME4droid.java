@@ -45,11 +45,13 @@
 package com.projectgg.cninja;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
@@ -91,6 +93,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.Settings;
+import android.widget.Toast;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -324,6 +328,13 @@ public class MAME4droid extends Activity {
 							mFullbannerAd.show();
 						} else {
 							Log.d(TAG, "Ad skip as AD download is not ready ");
+							Context context = getApplicationContext();
+							CharSequence text = "Ad download failed !";
+							int duration = Toast.LENGTH_SHORT;
+							Toast toast = Toast.makeText(context, text, duration);
+							toast.setDuration(1000);
+							toast.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+							toast.show();
 						}
 						break;
 
