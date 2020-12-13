@@ -167,9 +167,13 @@ public class MAME4droid extends Activity {
 	public void fixOrientation(){
 		//KKY force orientation to landscape . (true = landscape only. false = horizontal only)
 		boolean landscape_orientation = true;
+
 		if( landscape_orientation ) {
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER_LANDSCAPE);
-			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
+			/* [CNINJA-007] unexpected Orientation change (to Vertical mode) when resume application
+			//LG폰 세로버그 픽스를 위한 주석처리 	 */
+			//setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
+
 		} else {
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER_PORTRAIT);
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
