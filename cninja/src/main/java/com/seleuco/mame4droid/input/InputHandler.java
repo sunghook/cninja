@@ -84,6 +84,7 @@ public class InputHandler implements OnTouchListener, OnKeyListener, IController
 		return controlCustomizer;
 	}
 
+	private final static String TAG = "cninja-InputHandler";
 	protected static final int[] emulatorInputValues = {
 		UP_VALUE,
 		DOWN_VALUE,
@@ -776,6 +777,12 @@ public class InputHandler implements OnTouchListener, OnKeyListener, IController
 		if(  ((pad_data[0] & START_VALUE) != 0)  && ((pad_data[0] & COIN_VALUE) != 0) )
 		{
 			pad_data[0] = pad_data[0] & (~START_VALUE);
+		}
+
+		if( (pad_data[0] & COIN_VALUE) != 0  ) {
+			//Log.d(TAG, "Pause Emulator for Ad playback ");
+			mm.show_fullAD_StartGame();
+			return true;
 		}
 		Emulator.setPadData(0,pad_data[0]);
 		return true;

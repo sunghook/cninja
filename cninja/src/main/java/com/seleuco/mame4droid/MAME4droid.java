@@ -63,6 +63,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.google.android.gms.ads.MobileAds;
+import com.projectgg.cninja.Emulator;
 import com.projectgg.cninja.helpers.DialogHelper;
 import com.projectgg.cninja.helpers.MainHelper;
 import com.projectgg.cninja.helpers.MenuHelper;
@@ -75,6 +77,25 @@ import com.projectgg.cninja.prefs.UserPreferences;
 import com.projectgg.cninja.views.IEmuView;
 import com.projectgg.cninja.views.InputView;
 import com.projectgg.cninja.R;
+
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.provider.Settings;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+import static com.projectgg.cninja.input.IController.COIN_VALUE;
+
 
 final class NotificationHelper
 {
@@ -128,7 +149,15 @@ public class MAME4droid extends Activity {
 	protected FileExplorer fileExplore = null;
 	
 	protected NetPlay netPlay = null;
-		
+
+	public static final boolean BANNER_TEST_DEVICE = true;
+	private String full_unit_id_start = "ca-app-pub-3903577701358811/4003270138";
+	private final static String TAG = "cninja-Activity";
+	private AdRequest mAdrequest_startgame;
+	private InterstitialAd mFullbannerAd;
+	private final static int HANDLER_SHOW_FULLAD_STARTGAME  = 100;
+	private static Handler handler;
+
 	public NetPlay getNetPlay() {
 		return netPlay;
 	}
@@ -246,8 +275,60 @@ public class MAME4droid extends Activity {
 				}
 			}
         }
-    }
-    
+
+		MobileAds.initialize(this,  full_unit_id_start);
+
+		try {
+			mFullbannerAd = new InterstitialAd(this);
+			mFullbannerAd.setAdUnitId(full_unit_id_start);
+			mFullbannerAd.setAdListener(new AdListener(){
+				@Override
+				public void onAdLoaded() {
+					Log.d(TAG, "HANDLER_SHOW_FULLAD_STARTGAME onAdLoaded");
+					super.onAdLoaded();
+				}
+
+				@Override
+				public void onAdClosed() {
+					Log.d(TAG, "HANDLER_SHOW_FULLAD_STARTGAME onAdClosed");
+					super.onAdClosed();
+					load_fullAD();
+
+					Emulator.resume();
+					int newtouches = COIN_VALUE;
+					Emulator.setPadData(0, newtouches);
+				}
+
+			});
+
+			load_fullAD();
+		} catch (Throwable e){
+        	e.printStackTrace();
+		}
+		handler = new Handler() {
+			public void handleMessage(Message msg) {
+				switch (msg.what) {
+					case HANDLER_SHOW_FULLAD_STARTGAME:
+
+						Log.d(TAG, "case HANDLER_SHOW_FULLAD_STARTGAME start");
+						if(mFullbannerAd.isLoaded()==true){
+							Emulator.pause();
+							mFullbannerAd.show();
+						} else {
+							Log.d(TAG, "Ad skip as AD download is not ready ");
+						}
+						break;
+
+
+				}
+				fixOrientation();
+			}
+
+		};
+
+	}
+
+
     public void inflateViews(){
     	inputHandler.unsetInputListeners();
     	
@@ -337,7 +418,7 @@ public class MAME4droid extends Activity {
 		if(menuHelper!=null)
 		{
 		   if(menuHelper.createOptionsMenu(menu))return true;
-		}  
+		}
 		
 		return super.onCreateOptionsMenu(menu);
 	}
@@ -517,5 +598,64 @@ public class MAME4droid extends Activity {
 		   return inputHandler.genericMotion(event);
 		return false;
 	}
+
+
+	public void load_fullAD(){
+
+		AdRequest.Builder adbuilder_full = new AdRequest.Builder();
+
+
+		if (BANNER_TEST_DEVICE) {
+
+			String android_id = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+			String deviceId = md5(android_id).toUpperCase();
+
+			//deliLog.d("EMULATOR", "my deviceId " + deviceId);
+
+			adbuilder_full.addTestDevice(deviceId);
+		}
+
+		mAdrequest_startgame = adbuilder_full.build();
+		mFullbannerAd.loadAd(mAdrequest_startgame);
+
+	}
+	public void show_fullAD_StartGame(){
+
+
+
+		load_fullAD();
+
+		Message msg = new Message();
+		msg.what = HANDLER_SHOW_FULLAD_STARTGAME;
+		handler.sendMessage(msg);
+
+
+		//deli
+		Log.d("admob", "HANDLER_SHOW_FULLAD_STARTGAME show_fullAD_StartGame sendMessage completed");
+	}
+
+	public static final String md5(final String s) {
+		try {
+			// Create MD5 Hash
+			MessageDigest digest = java.security.MessageDigest.getInstance("MD5");
+			digest.update(s.getBytes());
+			byte messageDigest[] = digest.digest();
+
+			// Create Hex String
+			StringBuffer hexString = new StringBuffer();
+			for (int i = 0; i < messageDigest.length; i++) {
+				String h = Integer.toHexString(0xFF & messageDigest[i]);
+				while (h.length() < 2)
+					h = "0" + h;
+				hexString.append(h);
+			}
+			return hexString.toString();
+
+		} catch (NoSuchAlgorithmException e) {
+			Log.e("ADD TEST DEVICE", "ADD TEST DEVICE ERROR!!");
+		}
+		return "";
+	}
+
 
 }
