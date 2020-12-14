@@ -253,8 +253,9 @@ public class ControlCustomizer {
 					}
 					if (iv.getRect().contains(x, y)) {
 
-				    	if (iv.getType() == InputHandler.TYPE_BUTTON_RECT || iv.getType() == InputHandler.TYPE_STICK_IMG
-				    			|| iv.getType() == InputHandler.TYPE_ANALOG_RECT) {						
+						/* [CNINJA-001] Joystick customizer image scaling issue fix */
+						//if (iv.getType() == InputHandler.TYPE_BUTTON_RECT || iv.getType() == InputHandler.TYPE_ANALOG_RECT || iv.getType() == InputHandler.TYPE_STICK_IMG) {
+						if (iv.getType() == InputHandler.TYPE_BUTTON_RECT || iv.getType() == InputHandler.TYPE_ANALOG_RECT) {
 						//iv.setOffsetTMP(0,0);
 						//ax = iv.getRect().centerX();
 						//ay = iv.getRect().centerY();
