@@ -44,13 +44,15 @@
 
 package com.projectgg.cninja;
 
+import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
 
-import org.apache.http.conn.util.InetAddressUtils;
+/* [CNINJA-011] Netplay doesn't work */
+//import org.apache.http.conn.util.InetAddressUtils;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -200,9 +202,12 @@ public class NetPlay {
                         for (InetAddress addr : addrs) {
                             if (!addr.isLoopbackAddress()) {
                                 String sAddr = addr.getHostAddress().toUpperCase();
-                                boolean isIPv4 = InetAddressUtils.isIPv4Address(sAddr);                         
+								/* [CNINJA-011] Netplay doesn't work */
+                                /* boolean isIPv4 = InetAddressUtils.isIPv4Address(sAddr);
                                 if (isIPv4) 
-                                    return sAddr;                        
+                                    return sAddr;   */
+								if( addr instanceof Inet4Address)
+									return sAddr;
                             }
                         }                                               	
                     }
@@ -217,9 +222,12 @@ public class NetPlay {
                         for (InetAddress addr : addrs) {
                             if (!addr.isLoopbackAddress()) {
                                 String sAddr = addr.getHostAddress().toUpperCase();
-                                boolean isIPv4 = InetAddressUtils.isIPv4Address(sAddr);                         
+								/* [CNINJA-011] Netplay doesn't work */
+                                /* boolean isIPv4 = InetAddressUtils.isIPv4Address(sAddr);
                                 if (isIPv4) 
-                                    return sAddr;                        
+                                    return sAddr; */
+								if ( addr instanceof Inet4Address)
+									return sAddr;
                             }
                         }                                               	
                     }
@@ -231,9 +239,12 @@ public class NetPlay {
                 for (InetAddress addr : addrs) {
                     if (!addr.isLoopbackAddress()) {
                         String sAddr = addr.getHostAddress().toUpperCase();
-                        boolean isIPv4 = InetAddressUtils.isIPv4Address(sAddr);                         
+						/* [CNINJA-011] Netplay doesn't work */
+                        /* boolean isIPv4 = InetAddressUtils.isIPv4Address(sAddr);
                         if (isIPv4) 
-                            return sAddr;                        
+                            return sAddr;*/
+						if (addr instanceof Inet4Address)
+						    return sAddr;
                     }
                 }
             }
