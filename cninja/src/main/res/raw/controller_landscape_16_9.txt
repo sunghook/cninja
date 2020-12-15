@@ -28,5 +28,5 @@
 5,7,739,0,117,58        //option img
 5,8,-2,60,117,58        //coin img
 5,9,739,60,117,58       //start img
-8,0,10,270,200,200      //analog stick area
+8,0,10,270,300,300      //analog stick area
 7,150
