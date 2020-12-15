@@ -738,8 +738,8 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 			//deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = A_VALUE;
 			//deviceMappings[KeyEvent.KEYCODE_BUTTON_Y][id] = B_VALUE;
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = A_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = B_VALUE;			
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = B_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_X][id] = C_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_Y][id] = D_VALUE;
 			
@@ -756,9 +756,9 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		else if(name.indexOf("Gamepad 0")!=-1 || name.indexOf("Gamepad 1")!=-1 //Sixaxis Controller
 				|| name.indexOf("Gamepad 1")!=-1 || name.indexOf("Gamepad 2")!=-1){
 								
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_X][id] = C_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = B_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_Y][id] = D_VALUE;
 						
 			mapDPAD(id);mapL1R1(id);mapTHUMBS(id);mapSelectStart(id);
@@ -769,8 +769,8 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		}
 		else if(name.indexOf("nvidia_joypad")!=-1 || name.indexOf("NVIDIA Controller")!=-1) {
 								
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = B_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_X][id] = C_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_Y][id] = D_VALUE;
 			
@@ -789,8 +789,8 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		}
 		else if(name.indexOf("ipega Extending")!=-1) {
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = B_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_X][id] = C_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_Y][id] = D_VALUE;
 			
@@ -807,8 +807,8 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 				   || name.indexOf("Xbox 360 Wireless Receiver")!=-1 ){
 			
 
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = B_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_X][id] = C_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_Y][id] = D_VALUE;
 
@@ -836,9 +836,9 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		}
 		else if (name.indexOf("Logitech")!=-1 && name.indexOf("RumblePad 2")!=-1){
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_2][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_2][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_1][id] = C_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = B_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_4][id] = D_VALUE;
 			
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_9][id] = COIN_VALUE;
@@ -857,9 +857,9 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		}		
 		else if (name.indexOf("Logitech")!=-1 && name.indexOf("Precision")!=-1){
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_2][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_2][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_1][id] = C_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = B_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_4][id] = D_VALUE;
 			
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_5][id] = E_VALUE;
@@ -895,8 +895,8 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 			
 			mapDPAD(id);
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = B_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_X][id] = C_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_C][id] = D_VALUE;
 					
@@ -913,8 +913,8 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 			
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_Y][id] = D_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_X][id] = C_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = B_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = A_VALUE;
 			
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_L1][id] = E_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_R1][id] = F_VALUE;  			
@@ -968,8 +968,8 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		}	
 		else if (name.indexOf("Zeemote")!=-1 && name.indexOf("Steelseries free")!=-1){
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = B_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_Y][id] = D_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_X][id] = C_VALUE;
 			
@@ -985,9 +985,9 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		}			
 		else if (name.indexOf("HuiJia  USB GamePad")!=-1){
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_4][id] = C_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_2][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_2][id] = B_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_1][id] = D_VALUE;
 			
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_7][id] = E_VALUE;
@@ -1002,9 +1002,9 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		}	
 		else if (name.indexOf("Smartjoy Family Super Smartjoy 2")!=-1){
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_4][id] = C_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_2][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_2][id] = B_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_1][id] = D_VALUE;
 			
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_7][id] = E_VALUE;
@@ -1019,9 +1019,9 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		}	
 		else if (name.indexOf("Jess Tech Dual Analog Rumble Pad")!=-1){
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_1][id] = C_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_4][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_4][id] = B_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_2][id] = D_VALUE;
 			
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_5][id] = E_VALUE;
@@ -1039,9 +1039,9 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		}	
 		else if (name.indexOf("Microsoft")!=-1 && name.indexOf("Dual Strike")!=-1){
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_4][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_4][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_2][id] = C_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = B_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_1][id] = D_VALUE;
 			
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_7][id] = E_VALUE;
@@ -1058,9 +1058,9 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		}
 		else if (name.indexOf("Microsoft")!=-1 && name.indexOf("SideWinder")!=-1){
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = B_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_X][id] = C_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_Y][id] = D_VALUE;
 			
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_L1][id] = E_VALUE;
@@ -1089,8 +1089,8 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 			
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_4][id] = C_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_1][id] = D_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = B_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_2][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_2][id] = B_VALUE;
 			
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_7][id] = E_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_8][id] = F_VALUE;   
@@ -1109,9 +1109,9 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 			
 			mapDPAD(id);
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = B_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_X][id] = C_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_Y][id] = D_VALUE;
 			
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_L1][id] = E_VALUE;
@@ -1130,8 +1130,8 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 			
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_Y][id] = D_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_X][id] = C_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = A_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = B_VALUE;
 			
 			deviceMappings[KeyEvent.KEYCODE_MENU][id] = OPTION_VALUE;
 												
@@ -1147,8 +1147,8 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 			
 			mapDPAD(id);
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_2][id] = A_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_2][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_3][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_4][id] = C_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_1][id] = D_VALUE;
 			
@@ -1205,9 +1205,9 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		}		
 		else if (name.indexOf("joy_key")!=-1 && mm.getMainHelper().getDeviceDetected() == MainHelper.DEVICE_AGAMEPAD2){
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_X][id] = C_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = B_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_Y][id] = D_VALUE;
 			
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_L2][id] = E_VALUE;
@@ -1224,8 +1224,8 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		}else if(name.indexOf("NYKO PLAYPAD")!=-1 || 
 				(name.indexOf("Broadcom Bluetooth HID")!=-1  && mm.getMainHelper().getDeviceDetected() == MainHelper.DEVICE_SHIELD)) {
 			
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = B_VALUE;
-			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = A_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_B][id] = B_VALUE;
+			deviceMappings[KeyEvent.KEYCODE_BUTTON_A][id] = A_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_X][id] = C_VALUE;
 			deviceMappings[KeyEvent.KEYCODE_BUTTON_Y][id] = D_VALUE;
 			
