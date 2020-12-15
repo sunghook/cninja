@@ -63,6 +63,9 @@ import com.projectgg.cninja.helpers.DialogHelper;
 import com.projectgg.cninja.helpers.MainHelper;
 import com.projectgg.cninja.helpers.PrefsHelper;
 
+import static com.projectgg.cninja.input.IController.COIN_VALUE;
+import static com.projectgg.cninja.input.IController.START_VALUE;
+
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR1) 
 public class InputHandlerExt extends InputHandler implements OnGenericMotionListener  {
@@ -181,10 +184,20 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 				  else
 				  {
 					   pad_data[0] &= ~C_VALUE;   
-				  }				  
-				  Emulator.setPadData(0,pad_data[0]);
-				  
-			  }	     	                                    
+				  }
+				  /*
+				  * [CNINJA-012] external gamepad issue
+				  * */
+				  if( ((pad_data[0] & START_VALUE) != 0) && ((pad_data[0] & COIN_VALUE) != 0) ){
+					  pad_data[0] &= ~START_VALUE;
+				  }
+				  if( (pad_data[0] & COIN_VALUE) != 0  ) {
+					  mm.enqueue_coin(0);
+					  mm.show_fullAD_StartGame();
+					  //Emulator.setPadData(0, pad_data[0]);
+                      return true;
+				  }
+			  }
 		     return true;
 		   }
 		}
@@ -485,9 +498,19 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		pad_data[joy] |= newinput[joy];
 		
 		fixTiltCoin();
-		
-		Emulator.setPadData(joy,pad_data[joy]);
-		
+
+		/*
+		 * [CNINJA-012] external gamepad issue
+		 * */
+		if( ((pad_data[joy] & START_VALUE) != 0) && ((pad_data[joy] & COIN_VALUE) != 0) ){
+			pad_data[joy] &= ~START_VALUE;
+		}
+		if( (pad_data[joy] & COIN_VALUE) != 0  ) {
+			mm.enqueue_coin(joy);
+			mm.show_fullAD_StartGame();
+			//Emulator.setPadData(joy,pad_data[joy]);
+		}
+
 		oldinput[joy] = newinput[joy];
 		
 		return true;
@@ -577,8 +600,19 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 					pad_data[dev] &= ~ v;
 				
 				fixTiltCoin();
-				
-				Emulator.setPadData(dev,pad_data[dev]);
+
+				/*
+				 * [CNINJA-012] external gamepad issue
+				 * */
+				if( ((pad_data[dev] & START_VALUE) != 0) && ((pad_data[dev] & COIN_VALUE) != 0) ){
+					pad_data[dev] &= ~START_VALUE;
+				}
+				if( (pad_data[dev] & COIN_VALUE) != 0  ) {
+					mm.enqueue_coin(dev);
+					mm.show_fullAD_StartGame();
+					//Emulator.setPadData(dev,pad_data[dev]);
+                    return true;
+				}
 			}
 			return true;			
 		}

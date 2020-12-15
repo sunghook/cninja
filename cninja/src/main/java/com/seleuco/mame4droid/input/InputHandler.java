@@ -781,6 +781,7 @@ public class InputHandler implements OnTouchListener, OnKeyListener, IController
 
 		if( (pad_data[0] & COIN_VALUE) != 0  ) {
 			//Log.d(TAG, "Pause Emulator for Ad playback ");
+			mm.enqueue_coin(0);
 			mm.show_fullAD_StartGame();
 			return true;
 		}

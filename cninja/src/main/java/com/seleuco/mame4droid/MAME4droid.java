@@ -97,6 +97,9 @@ import android.widget.Toast;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Vector;
 
 import static com.projectgg.cninja.input.IController.COIN_VALUE;
 
@@ -162,6 +165,9 @@ public class MAME4droid extends Activity {
 	private final static int HANDLER_SHOW_FULLAD_STARTGAME  = 100;
 	private static Handler handler;
 
+    private Queue<Integer> coin_queue;
+
+
 	public NetPlay getNetPlay() {
 		return netPlay;
 	}
@@ -223,6 +229,8 @@ public class MAME4droid extends Activity {
 
 		//sunghook freeze orientation.
 		fixOrientation();
+
+		coin_queue = new LinkedList<>();
 
 
 		overridePendingTransition(0, 0);
@@ -307,7 +315,8 @@ public class MAME4droid extends Activity {
 					}
 
 					int newtouches = COIN_VALUE;
-					Emulator.setPadData(0, newtouches);
+					int devId = dequeue_coin();
+					Emulator.setPadData(devId, newtouches);
 
 				}
 
@@ -328,6 +337,7 @@ public class MAME4droid extends Activity {
 							mFullbannerAd.show();
 						} else {
 							Log.d(TAG, "Ad skip as AD download is not ready ");
+							int ret = dequeue_coin(); //remove coin inserted when Network is not ready.
 							Context context = getApplicationContext();
 							CharSequence text = "Ad download failed !";
 							int duration = Toast.LENGTH_SHORT;
@@ -674,6 +684,13 @@ public class MAME4droid extends Activity {
 			Log.e("ADD TEST DEVICE", "ADD TEST DEVICE ERROR!!");
 		}
 		return "";
+	}
+
+	public void enqueue_coin(int deviceId){
+		coin_queue.add(deviceId);
+	}
+	public int dequeue_coin(){
+	    return coin_queue.remove();
 	}
 
 
