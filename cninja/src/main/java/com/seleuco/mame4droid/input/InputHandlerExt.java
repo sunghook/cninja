@@ -194,8 +194,9 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 				  if( (pad_data[0] & COIN_VALUE) != 0  ) {
 					  mm.enqueue_coin(0);
 					  mm.show_fullAD_StartGame();
-					  //Emulator.setPadData(0, pad_data[0]);
                       return true;
+				  } else {
+					  Emulator.setPadData(0, pad_data[0]);
 				  }
 			  }
 		     return true;
@@ -508,9 +509,9 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 		if( (pad_data[joy] & COIN_VALUE) != 0  ) {
 			mm.enqueue_coin(joy);
 			mm.show_fullAD_StartGame();
-			//Emulator.setPadData(joy,pad_data[joy]);
+		} else {
+			Emulator.setPadData(joy,pad_data[joy]);
 		}
-
 		oldinput[joy] = newinput[joy];
 		
 		return true;
@@ -610,9 +611,11 @@ public class InputHandlerExt extends InputHandler implements OnGenericMotionList
 				if( (pad_data[dev] & COIN_VALUE) != 0  ) {
 					mm.enqueue_coin(dev);
 					mm.show_fullAD_StartGame();
-					//Emulator.setPadData(dev,pad_data[dev]);
                     return true;
+				} else {
+					Emulator.setPadData(dev,pad_data[dev]);
 				}
+
 			}
 			return true;			
 		}
