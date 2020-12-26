@@ -133,7 +133,6 @@ public class MainHelper {
 	public String getInstallationDIR()
 	{
 		String res_dir = null;
-
 		
 		if(mm.getPrefsHelper().getInstallationDIR()!=null){
 			Log.d("neinnil", "install path : " + mm.getPrefsHelper().getInstallationDIR());
@@ -143,7 +142,7 @@ public class MainHelper {
 		//		//android.os.Debug.waitForDebugger();
 //	    String state = Environment.getExternalStorageState();
 //	    if (Environment.MEDIA_MOUNTED.equals(state)) {
-//	    	res_dir = Environment.getExternalStorageDirectory().getAbsolutePath()+"/MAME4droid/";
+//	    	res_dir = Environment.getExternalStorageDirectory().getAbsolutePath()+"/CNINJA2020/";
 //	    	Log.d("Emulator(neinnil): ", "externalStorage: "+res_dir);
 //	    }
 //	    else
