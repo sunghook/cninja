@@ -70,6 +70,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.view.View.MeasureSpec;
@@ -137,12 +138,17 @@ public class MainHelper {
 			return mm.getPrefsHelper().getInstallationDIR();
 				
 		//android.os.Debug.waitForDebugger();
+
+		res_dir = Environment.getDataDirectory().getAbsolutePath()+"/cninja2020/";
+		/*
 	    String state = Environment.getExternalStorageState();
 	    if (Environment.MEDIA_MOUNTED.equals(state)) {
-	    	res_dir = Environment.getExternalStorageDirectory().getAbsolutePath()+"/cninja2020/";
+//	    	res_dir = Environment.getExternalStorageDirectory().getAbsolutePath()+"/cninja2020/";
+	    	res_dir = Environment.getDataDirectory().getAbsolutePath()+"/cninja2020/"
 	    }
 	    else
 	    	res_dir = mm.getFilesDir().getAbsolutePath()+"/cninja2020/";
+		*/
 	    	    
 	    //res_dir = mm.getExternalFilesDir(null).getAbsolutePath()+"/MAME4droid/";
 		//File[] f = mm.getExternalFilesDirs(null);
