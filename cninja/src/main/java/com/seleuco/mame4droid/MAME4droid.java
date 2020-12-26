@@ -338,13 +338,8 @@ public class MAME4droid extends Activity {
 						} else {
 							Log.d(TAG, "Ad skip as AD download is not ready ");
 							int ret = dequeue_coin(); //remove coin inserted when Network is not ready.
-							Context context = getApplicationContext();
-							CharSequence text = "Ad download failed !";
-							int duration = Toast.LENGTH_SHORT;
-							Toast toast = Toast.makeText(context, text, duration);
-							toast.setDuration(1000);
-							toast.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
-							toast.show();
+							getDialogHelper().setInfoMsg("AD play is not available now. Please check Network");
+							showDialog(DialogHelper.DIALOG_INFO);
 						}
 						break;
 
