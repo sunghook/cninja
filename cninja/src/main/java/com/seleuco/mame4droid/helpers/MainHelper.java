@@ -139,10 +139,10 @@ public class MainHelper {
 		//android.os.Debug.waitForDebugger();
 	    String state = Environment.getExternalStorageState();
 	    if (Environment.MEDIA_MOUNTED.equals(state)) {
-	    	res_dir = Environment.getExternalStorageDirectory().getAbsolutePath()+"/MAME4droid/";  	    	
+	    	res_dir = Environment.getExternalStorageDirectory().getAbsolutePath()+"/cninja2020/";
 	    }
 	    else
-	    	res_dir = mm.getFilesDir().getAbsolutePath()+"/MAME4droid/";
+	    	res_dir = mm.getFilesDir().getAbsolutePath()+"/cninja2020/";
 	    	    
 	    //res_dir = mm.getExternalFilesDir(null).getAbsolutePath()+"/MAME4droid/";
 		//File[] f = mm.getExternalFilesDirs(null);
