@@ -139,7 +139,7 @@ public class MainHelper {
 				
 		//android.os.Debug.waitForDebugger();
 
-		res_dir = Environment.getDataDirectory().getAbsolutePath()+"/cninja2020/";
+		//res_dir = Environment.getDataDirectory().getAbsolutePath()+"/cninja2020/";
 		/*
 	    String state = Environment.getExternalStorageState();
 	    if (Environment.MEDIA_MOUNTED.equals(state)) {
@@ -149,6 +149,7 @@ public class MainHelper {
 	    else
 	    	res_dir = mm.getFilesDir().getAbsolutePath()+"/cninja2020/";
 		*/
+		res_dir = mm.getFilesDir().getAbsolutePath() + "/CNINJA2020/";
 	    	    
 	    //res_dir = mm.getExternalFilesDir(null).getAbsolutePath()+"/MAME4droid/";
 		//File[] f = mm.getExternalFilesDirs(null);
@@ -161,7 +162,7 @@ public class MainHelper {
 
 	
 	public boolean ensureInstallationDIR(String dir){
-				
+	/*		
 		if(!dir.endsWith("/"))
 			dir+="/";
 		
@@ -203,7 +204,53 @@ public class MainHelper {
 		}
 		
 		mm.getPrefsHelper().setOldInstallationDIR(dir);
-						
+			*/
+
+
+
+		if(!dir.endsWith("/"))
+			dir+="/";
+
+		File res_dir = new File(dir);
+
+		boolean created = false;
+
+		if(res_dir.exists() == false)
+		{
+			if(!res_dir.mkdirs())
+			{
+				mm.getDialogHelper().setErrorMsg("Can't find/create: '"+dir+"' Is it writeable?.\nReverting...");
+				mm.showDialog(DialogHelper.DIALOG_ERROR_WRITING);
+				return false;
+			}
+			else
+			{
+				created= true;
+			}
+		}
+
+		String str_sav_dir = dir+"saves/";
+		File sav_dir = new File(str_sav_dir);
+		if(sav_dir.exists() == false)
+		{
+			if(!sav_dir.mkdirs())
+			{
+				mm.getDialogHelper().setErrorMsg("Can't find/create: '"+str_sav_dir+"' Is it writeable?.\nReverting...");
+				mm.showDialog(DialogHelper.DIALOG_ERROR_WRITING);
+				return false;
+			}
+		}
+
+		if(created )
+		{		// neinnil: install -- don't show a message.
+			String rompath = mm.getPrefsHelper().getROMsDIR() != null ? mm.getPrefsHelper().getROMsDIR() : dir +"roms";
+//			mm.getDialogHelper().setInfoMsg("Created: '"+dir+"' to store save states, cfg files and MAME assets.\n\nBeware, copy or move your zipped ROMs under '"+ rompath +"' directory!\n\nMAME4droid 0.139 uses only 0.139 MAME romset.\n\nYou may have to completely turn off your device to see new folders. You might need to unplug also.");
+//			mm.showDialog(DialogHelper.DIALOG_INFO);
+			Log.d("mame4droid:(neinnil)","Created: '"+dir+"' to store save states, cfg files and MAME assets.\n\nBeware, copy or move your zipped ROMs under '"+ rompath +"' directory!\n\nMAME4droid 0.139 uses only 0.139 MAME romset.\n\nYou may have to completely turn off your device to see new folders. You might need to unplug also." );
+		}
+
+		mm.getPrefsHelper().setOldInstallationDIR(dir);
+
 		return true;		
 	}
 	
