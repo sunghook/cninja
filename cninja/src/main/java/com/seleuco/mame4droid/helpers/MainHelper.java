@@ -133,23 +133,24 @@ public class MainHelper {
 	public String getInstallationDIR()
 	{
 		String res_dir = null;
-		
-		if(mm.getPrefsHelper().getInstallationDIR()!=null)
-			return mm.getPrefsHelper().getInstallationDIR();
-				
-		//android.os.Debug.waitForDebugger();
 
-		//res_dir = Environment.getDataDirectory().getAbsolutePath()+"/cninja2020/";
-		/*
-	    String state = Environment.getExternalStorageState();
-	    if (Environment.MEDIA_MOUNTED.equals(state)) {
-//	    	res_dir = Environment.getExternalStorageDirectory().getAbsolutePath()+"/cninja2020/";
-	    	res_dir = Environment.getDataDirectory().getAbsolutePath()+"/cninja2020/"
-	    }
-	    else
-	    	res_dir = mm.getFilesDir().getAbsolutePath()+"/cninja2020/";
-		*/
-		res_dir = mm.getFilesDir().getAbsolutePath() + "/CNINJA2020/";
+		
+		if(mm.getPrefsHelper().getInstallationDIR()!=null){
+			Log.d("neinnil", "install path : " + mm.getPrefsHelper().getInstallationDIR());
+			return mm.getPrefsHelper().getInstallationDIR();
+		}
+
+		//		//android.os.Debug.waitForDebugger();
+//	    String state = Environment.getExternalStorageState();
+//	    if (Environment.MEDIA_MOUNTED.equals(state)) {
+//	    	res_dir = Environment.getExternalStorageDirectory().getAbsolutePath()+"/MAME4droid/";
+//	    	Log.d("Emulator(neinnil): ", "externalStorage: "+res_dir);
+//	    }
+//	    else
+		{ // neinnil --
+			res_dir = mm.getFilesDir().getAbsolutePath() + "/CNINJA2020/";
+			Log.d("Emulator(neinnil): ", "App. getFilesDir()"+res_dir);
+		}
 	    	    
 	    //res_dir = mm.getExternalFilesDir(null).getAbsolutePath()+"/MAME4droid/";
 		//File[] f = mm.getExternalFilesDirs(null);
@@ -162,7 +163,8 @@ public class MainHelper {
 
 	
 	public boolean ensureInstallationDIR(String dir){
-	/*		
+	//deli 스후프 미사용 기능
+ /*
 		if(!dir.endsWith("/"))
 			dir+="/";
 		
