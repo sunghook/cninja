@@ -65,7 +65,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.projectgg.cninja.Emulator;
 import com.projectgg.cninja.helpers.DialogHelper;
 import com.projectgg.cninja.helpers.MainHelper;
@@ -288,44 +291,58 @@ public class MAME4droid extends Activity {
 			}
         }
 
-		MobileAds.initialize(this,  full_unit_id_start);
+//		MobileAds.initialize(this,  full_unit_id_start);
+		MobileAds.initialize(this, new OnInitializationCompleteListener() {
+			@Override
+			public void onInitializationComplete(InitializationStatus initializationStatus) {
+				Log.d(TAG, "MobileAds init done (tony)");
+				try {
+					mFullbannerAd = new InterstitialAd(getApplicationContext());
+					mFullbannerAd.setAdUnitId(full_unit_id_start);
+					mFullbannerAd.setAdListener(new AdListener(){
+						@Override
+						public void onAdFailedToLoad(LoadAdError loadAdError) {
+							Log.d(TAG, "tony check error " + loadAdError.toString());
+							super.onAdFailedToLoad(loadAdError);
 
-		try {
-			mFullbannerAd = new InterstitialAd(this);
-			mFullbannerAd.setAdUnitId(full_unit_id_start);
-			mFullbannerAd.setAdListener(new AdListener(){
-				@Override
-				public void onAdLoaded() {
-					Log.d(TAG, "HANDLER_SHOW_FULLAD_STARTGAME onAdLoaded");
-					super.onAdLoaded();
-				}
+						}
 
-				@Override
-				public void onAdClosed() {
-					Log.d(TAG, "HANDLER_SHOW_FULLAD_STARTGAME onAdClosed");
-					super.onAdClosed();
+						@Override
+						public void onAdLoaded() {
+							Log.d(TAG, "HANDLER_SHOW_FULLAD_STARTGAME onAdLoaded");
+							super.onAdLoaded();
+						}
+
+						@Override
+						public void onAdClosed() {
+							Log.d(TAG, "HANDLER_SHOW_FULLAD_STARTGAME onAdClosed");
+							super.onAdClosed();
+							load_fullAD();
+
+							Emulator.resume();
+
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
+
+							int newtouches = COIN_VALUE;
+							int devId = dequeue_coin();
+							Emulator.setPadData(devId, newtouches);
+
+						}
+
+					});
+
 					load_fullAD();
-
-					Emulator.resume();
-
-					try {
-						Thread.sleep(500);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-
-					int newtouches = COIN_VALUE;
-					int devId = dequeue_coin();
-					Emulator.setPadData(devId, newtouches);
-
+				} catch (Throwable e){
+					e.printStackTrace();
 				}
+			}
+		});
 
-			});
 
-			load_fullAD();
-		} catch (Throwable e){
-        	e.printStackTrace();
-		}
 		handler = new Handler() {
 			public void handleMessage(Message msg) {
 				switch (msg.what) {
