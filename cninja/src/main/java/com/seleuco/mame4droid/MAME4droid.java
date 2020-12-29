@@ -160,7 +160,7 @@ public class MAME4droid extends Activity {
 	
 	protected NetPlay netPlay = null;
 
-	public static final boolean BANNER_TEST_DEVICE = true;
+	public static final boolean BANNER_TEST_DEVICE = false;
 	private String full_unit_id_start = "ca-app-pub-3903577701358811/4003270138";
 	private final static String TAG = "cninja-Activity";
 	private AdRequest mAdrequest_startgame;
