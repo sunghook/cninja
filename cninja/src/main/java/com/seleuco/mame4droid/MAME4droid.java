@@ -355,7 +355,7 @@ public class MAME4droid extends Activity {
 						} else {
 							Log.d(TAG, "Ad skip as AD download is not ready ");
 							int ret = dequeue_coin(); //remove coin inserted when Network is not ready.
-							getDialogHelper().setInfoMsg("AD play is not available now. Please check Network");
+							getDialogHelper().setInfoMsg("The AD is not ready. Please try in a second or check network.");
 							showDialog(DialogHelper.DIALOG_INFO);
 						}
 						break;

@@ -114,7 +114,7 @@ public class NetPlay {
 		String name = Emulator.getValueStr(Emulator.GAME_SELECTED);
 		if(name!=null && name.length()!=0)
 		{
-		   startButton.setText("Create IPX");
+		   startButton.setText("Create Game");
 		}
 		else
 		{
