@@ -44,9 +44,13 @@
 
 package com.projectgg.cninja;
 
+import java.io.IOException;
+import java.net.DatagramPacket;
 import java.net.Inet4Address;
 import java.net.InetAddress;
+import java.net.MulticastSocket;
 import java.net.NetworkInterface;
+import java.net.SocketTimeoutException;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
@@ -61,6 +65,8 @@ import android.app.Service;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.os.Build;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -73,7 +79,11 @@ import com.projectgg.cninja.R;
 
 
 public class NetPlay {
-		
+
+    public final String ROOM_MULTICAST_ADDR = "239.1.5.9";
+    public final int ROOM_MULTICAST_PORT = 1004;
+    public static final String TAG = "NetPlay";
+
 	protected Dialog netplayDlg = null;
 	
 	protected ProgressDialog progressDialog = null; 
@@ -257,7 +267,38 @@ public class NetPlay {
 			createGame();			
 		}
 	};
-	
+
+	public String checkIfRoomExistOnSameNetwork(){
+		String ip="";
+
+		MulticastSocket ms = null;
+		DatagramPacket packet;
+		byte[] data = new byte[1024];
+
+		try {
+			InetAddress groupAddress = InetAddress.getByName(ROOM_MULTICAST_ADDR);
+			ms = new MulticastSocket(ROOM_MULTICAST_PORT);
+			ms.joinGroup(groupAddress);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		try {
+			packet = new DatagramPacket(data, data.length);
+			ms.setSoTimeout(500);
+			if (ms != null)
+				ms.receive(packet);
+
+			String codeString = new String(data, 0, packet.getLength());
+			Log.d(TAG, "received ROOM IP : " + packet.getAddress().toString() + " data[" + codeString + "]");
+
+
+		} catch (Exception e){
+			e.printStackTrace();
+			ip = "";
+		}
+		return ip;
+	}
 	Button.OnClickListener joinGameClick = new Button.OnClickListener() {
 		public void onClick(View v) {	
 			AlertDialog.Builder alert = new AlertDialog.Builder(mm);
@@ -269,6 +310,8 @@ public class NetPlay {
 			alert.setView(input);
 			
 			String ip = mm.getPrefsHelper().getSharedPreferences().getString(PrefsHelper.PREF_NETPLAY_PEERADDR,"");
+//TODO : get list of ip addresses -
+			ip = checkIfRoomExistOnSameNetwork();
 			
 			input.setText(ip);
 			input.setSelection(input.getText().length());
@@ -314,10 +357,36 @@ public class NetPlay {
 			prepareButtons();
 		}
 	};	
-	
+
+	public String getDeviceName() {
+		String manufacturer = Build.MANUFACTURER;
+		String model = Build.MODEL;
+		if (model.startsWith(manufacturer)) {
+			return capitalize(model);
+		} else {
+			return capitalize(manufacturer) + " " + model;
+		}
+	}
+
+
+	private String capitalize(String s) {
+		if (s == null || s.length() == 0) {
+			return "";
+		}
+		char first = s.charAt(0);
+		if (Character.isUpperCase(first)) {
+			return s;
+		} else {
+			return Character.toUpperCase(first) + s.substring(1);
+		}
+	}
 	public void createGame() {
 		
-		String strPort = mm.getPrefsHelper().getNetplayPort();		
+		String strPort = mm.getPrefsHelper().getNetplayPort();
+		final String RoomName = getDeviceName();
+		final String GameName = mm.getPackageName();
+
+
 		int port = 0;
 		try{port = Integer.parseInt(strPort);}catch(Exception e){}
 		if(!(port>=1024 && port <= 32768*2)){
@@ -343,6 +412,7 @@ public class NetPlay {
 				});
 
 		Thread t = new Thread(new Runnable() {
+			byte[] roomBroadcastingData = new byte[1024];
 			public void run() {
 				final String ip = getIPAddress(); 
 				if(ip==null)
@@ -365,10 +435,24 @@ public class NetPlay {
 		            }
 		    	});					  
 				while (Emulator.getValue(Emulator.NETPLAY_HAS_JOINED) == 0 && !canceled) {
+					MulticastSocket sender = null;
+					DatagramPacket packet = null;
+					InetAddress group = null;
 					try {
-						Thread.sleep(1000);
+						//sunghook debug --> send UDP broadcast from here ->>>>>
+						// eg., ) "192.168.10.108/com.projectgg.cninja/Samsung Galaxy S10"
+						roomBroadcastingData = (ip+"/"+ GameName + "/"+ RoomName).getBytes();
+						sender = new MulticastSocket();
+						group = InetAddress.getByName(ROOM_MULTICAST_ADDR);
+						packet = new DatagramPacket(roomBroadcastingData, roomBroadcastingData.length, group, ROOM_MULTICAST_PORT);
+						sender.send(packet);
+						Log.d(TAG, "sending broadcast over" + ROOM_MULTICAST_ADDR + ":" + ROOM_MULTICAST_PORT);
+						sender.close();
+						Thread.sleep(300);
 						//System.out.println("Esperando...");
 					} catch (InterruptedException e) {
+						e.printStackTrace();
+					} catch (IOException e){
 						e.printStackTrace();
 					}
 				}
