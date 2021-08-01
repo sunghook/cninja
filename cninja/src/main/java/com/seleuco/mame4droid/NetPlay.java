@@ -51,6 +51,8 @@ import java.net.InetAddress;
 import java.net.MulticastSocket;
 import java.net.NetworkInterface;
 import java.net.SocketTimeoutException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
@@ -66,12 +68,18 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.projectgg.cninja.helpers.PrefsHelper;
@@ -81,11 +89,20 @@ import com.projectgg.cninja.R;
 public class NetPlay {
 
     public final String ROOM_MULTICAST_ADDR = "239.1.5.9";
-    public final int ROOM_MULTICAST_PORT = 1004;
+    public final int ROOM_MULTICAST_PORT = 9004;
     public static final String TAG = "NetPlay";
+	public EditText input = null;
+	public Spinner input2 = null;
+	public NetPlay myself = null;
+	public List<String> roomList = null;
+	public static Handler handler = null;
+	ArrayAdapter<String> spinnerArrayAdapter = null ;
+	public Thread receiverThread=null;
+	public boolean State_fetchingIP = false;
+	final int MSG_ROOM_LIST_ADD = 10000;
 
 	protected Dialog netplayDlg = null;
-	
+
 	protected ProgressDialog progressDialog = null; 
 	
 	private boolean canceled = false;	
@@ -94,6 +111,23 @@ public class NetPlay {
 		
 	public NetPlay(MAME4droid mm) {
 		this.mm = mm;
+		this.myself = this;
+		State_fetchingIP = false;
+		handler = new Handler() {
+			public void handleMessage(Message msg){
+				if(msg.what == MSG_ROOM_LIST_ADD){
+					Log.d(TAG, "sunghook enter handleMessage msg.what=MSG_ROOM_LIST_ADD ");
+			        String scanedRoomIP = msg.obj.toString();
+			        if ( myself.roomList.contains(scanedRoomIP) == false ) {
+						myself.spinnerArrayAdapter.add(scanedRoomIP);
+						Log.d(TAG, "sunghook debug new IP will be added to spinner !!!");
+					} else {
+						myself.spinnerArrayAdapter.add(scanedRoomIP);
+						Log.d(TAG, "sunghook debug duplicated IP !!! ");
+					}
+				}
+			}
+		};
 	}
 	
 	DialogInterface.OnCancelListener dialogCancelListener = new DialogInterface.OnCancelListener() { 
@@ -132,7 +166,12 @@ public class NetPlay {
 			startButton.setEnabled(false);
 		}
 	}
-		
+
+	public void addRoomSuggestions(String roomIp){
+	    Log.d(TAG, "sunghook enter addRoomSuggestions() ");
+		Message msg = handler.obtainMessage(MSG_ROOM_LIST_ADD, roomIp);
+		handler.sendMessage(msg);
+	}
 	public void createDialog() {
 		
 		netplayDlg = new Dialog(mm);
@@ -275,28 +314,42 @@ public class NetPlay {
 		DatagramPacket packet;
 		byte[] data = new byte[1024];
 
+		Log.d(TAG, "tony debug 111111");
 		try {
 			InetAddress groupAddress = InetAddress.getByName(ROOM_MULTICAST_ADDR);
 			ms = new MulticastSocket(ROOM_MULTICAST_PORT);
 			ms.joinGroup(groupAddress);
 		} catch (Exception e) {
 			e.printStackTrace();
+			Log.d(TAG, "error message  : " + e.toString());
 		}
 
+		Log.d(TAG, "tony debug 2222222");
 		try {
 			packet = new DatagramPacket(data, data.length);
-			ms.setSoTimeout(500);
+			ms.setSoTimeout(300);
 			if (ms != null)
 				ms.receive(packet);
 
 			String codeString = new String(data, 0, packet.getLength());
 			Log.d(TAG, "received ROOM IP : " + packet.getAddress().toString() + " data[" + codeString + "]");
 
-
-		} catch (Exception e){
+			if(codeString.length() > 0)
+			{
+				String[] tokens = codeString.split("/");
+				String ipaddress = tokens[0];
+				String gamename = tokens[1];
+				String gamehostdevicename = tokens[2];
+				if(gamename.compareTo(mm.getPackageName()) == 0){
+					ip = ipaddress;
+				}
+			}
+		} catch (Exception e) {
+			Log.d(TAG, "tony trace error : " + e.toString());
 			e.printStackTrace();
 			ip = "";
 		}
+		ms.close();
 		return ip;
 	}
 	Button.OnClickListener joinGameClick = new Button.OnClickListener() {
@@ -306,21 +359,92 @@ public class NetPlay {
 			alert.setTitle("Enter peer IP Address:");
 			//alert.setMessage("Enter peer IP address:");
 
-			final EditText input = new EditText(mm);
-			alert.setView(input);
+			//EditText
+			View alertView = mm.getLayoutInflater().inflate(R.layout.netplay_join, null);
+
+			if(input == null) {
+				input = (EditText) alertView.findViewById(R.id.ipinput);
+				input2 = (Spinner) alertView.findViewById(R.id.ipsuggestions);
+				input2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+					@Override
+					public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+						input.setText(input2.getItemAtPosition(position).toString());
+					}
+
+					@Override
+					public void onNothingSelected(AdapterView<?> parent) {
+
+					}
+				});
+				String[] initialServerIP = new String[] {};
+			    roomList = new ArrayList<>(Arrays.asList(initialServerIP));
+			    if(spinnerArrayAdapter == null) {
+					spinnerArrayAdapter = new ArrayAdapter<String>(mm.getApplicationContext(), R.layout.spinner_item, roomList);
+					spinnerArrayAdapter.setDropDownViewResource(R.layout.spinner_item);
+				}
+				input2.setAdapter(spinnerArrayAdapter);
+						//final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(
+				//                this,R.layout.spinner_item,plantsList);
+			}
+
+//				input = new EditText(mm);
+//			EditText input2 = new EditText(mm);
+//			input2.setText("hello second");
+			alert.setView(alertView);
+//			alert.setView(input2);
 			
-			String ip = mm.getPrefsHelper().getSharedPreferences().getString(PrefsHelper.PREF_NETPLAY_PEERADDR,"");
+//			String ip = mm.getPrefsHelper().getSharedPreferences().getString(PrefsHelper.PREF_NETPLAY_PEERADDR,"");
+			String ip = "" ;
 //TODO : get list of ip addresses -
-			ip = checkIfRoomExistOnSameNetwork();
-			
+			Log.d(TAG, "tony debug before check room existance");
+			receiverThread = new Thread((new Runnable() {
+				//int x = 0;
+				NetPlay parent = null;
+				EditText et = null;
+				ArrayAdapter<String> spinAdp = null ;
+				Object obj;
+				String ip = "";
+				public void run() {
+					while (myself.State_fetchingIP == true){
+						ip = checkIfRoomExistOnSameNetwork();
+						Log.d(TAG, "tony debug ip address received : " + ip );
+						try {
+							Thread.sleep(300);
+						} catch(InterruptedException e){
+							e.printStackTrace();
+						}
+						if(ip.length() > 0 ) {
+							//et.setText(ip);
+//							spinAdp.add(ip);
+							parent.myself.addRoomSuggestions(ip);
+						}
+					}
+				}
+				public Runnable pass(NetPlay parent) {
+					this.et = parent.input;
+					this.parent = parent;
+					this.spinAdp = parent.spinnerArrayAdapter;
+					//this.x = x;
+					//this.obj = obj;
+//					((String) obj) =
+					return this;
+				}
+			}).pass(myself));
+
+			spinnerArrayAdapter.clear();
+			roomList.clear();
+			State_fetchingIP = true;
+			receiverThread.start();
+
 			input.setText(ip);
 			input.setSelection(input.getText().length());
 
 			alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int whichButton) {
+
 			     String ip = input.getText().toString();
-			     
-			     if(ip==null || ip.length()==0)
+
+				if(ip==null || ip.length()==0)
 			     {
 					Toast.makeText(mm, "Invalid peer IP!",Toast.LENGTH_SHORT).show();
 					return;
@@ -333,7 +457,20 @@ public class NetPlay {
 			     Editor edit = sp.edit();
 				 edit.putString(PrefsHelper.PREF_NETPLAY_PEERADDR,ip);
 				 edit.commit();
-				 
+
+				 //sunghook : clear server room fetching thread -
+				{
+					State_fetchingIP = false;
+					spinnerArrayAdapter.clear();
+					roomList.clear();
+					input = null;
+					try {
+						receiverThread.join();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+						Log.d(TAG, "thread joining error with " + e.toString());
+					}
+				}
 			     joinGame(ip);
 			  }
 			});
@@ -341,7 +478,22 @@ public class NetPlay {
 			alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 			  public void onClick(DialogInterface dialog, int whichButton) {
 			    // Canceled.
+				  myself.State_fetchingIP = false;
+				  spinnerArrayAdapter.clear();
+				  roomList.clear();
+				  input = null;
+
 			  }
+			});
+			alert.setOnDismissListener(new DialogInterface.OnDismissListener() {
+				@Override
+				public void onDismiss(DialogInterface dialog) {
+					myself.State_fetchingIP = false;
+					spinnerArrayAdapter.clear();
+					roomList.clear();
+					input = null;
+
+				}
 			});
 
 			AlertDialog dlg = alert.create();					
@@ -355,6 +507,7 @@ public class NetPlay {
 			Emulator.setValue(Emulator.NETPLAY_HAS_CONNECTION, 0);
 			Toast.makeText(mm, "Disconnected from Netplay",Toast.LENGTH_SHORT).show();	
 			prepareButtons();
+
 		}
 	};	
 
@@ -507,6 +660,17 @@ public class NetPlay {
 					@Override
 					public void onCancel(DialogInterface dialog) {
 						canceled = true;
+						State_fetchingIP = false;
+						spinnerArrayAdapter.clear();
+						roomList.clear();
+						input = null;
+						Log.d(TAG, "sunghook clear IP fetching thread -----");
+						try {
+							receiverThread.join();
+						} catch (InterruptedException e){
+							e.printStackTrace();
+							Log.d(TAG, "thread joining error with " + e.toString());
+						}
 					}
 				});
 
@@ -517,6 +681,10 @@ public class NetPlay {
 					try {
 						if (Emulator.netplayInit(null, 0, 1) == -1)
 							canceled = true;
+							State_fetchingIP = false;
+						spinnerArrayAdapter.clear();
+						roomList.clear();
+						input = null;
 						Thread.sleep(1000);
 						//System.out.println("Esperando...");
 					} catch (InterruptedException e) {
